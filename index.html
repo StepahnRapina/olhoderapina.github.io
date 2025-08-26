@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,32 @@
   <style>
     body { font-family: 'Roboto', sans-serif; }
   </style>
+  <title>Portal - Início</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-white text-black">
+<body class="font-roboto bg-white text-black">
 
   <!-- Barra de Menu Superior -->
   <header class="bg-black text-white border-b border-gray-700">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3 text-sm font-medium">
       <!-- Menu Esquerda -->
+  <!-- Topo fixo -->
+  <header class="fixed top-0 w-full z-50">
+    <!-- Barra superior -->
+    <div class="bg-black text-white flex justify-between items-center px-6 py-3 shadow-md">
       <nav class="flex space-x-6">
         <a href="#" class="hover:text-gray-300">Home</a>
         <a href="#" class="hover:text-gray-300">Astronomia</a>
         <a href="#" class="hover:text-gray-300">Filosofia</a>
         <a href="#" class="hover:text-gray-300">Sobre</a>
+        <a href="#" class="hover:text-yellow-400">Home</a>
+        <a href="#" class="hover:text-yellow-400">Astronomia</a>
+        <a href="#" class="hover:text-yellow-400">Filosofia</a>
+        <a href="#" class="hover:text-yellow-400">Sobre</a>
       </nav>
       <!-- Ícones Direita -->
       <div class="flex space-x-4 text-lg">
@@ -29,6 +44,11 @@
         <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a>
         <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
         <a href="#" class="hover:text-gray-300"><i class="fab fa-x-twitter"></i></a>
+      <div class="flex space-x-5 text-yellow-400 text-lg">
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
       </div>
     </div>
   </header>
@@ -53,6 +73,15 @@
     <div class="flex flex-col items-center justify-center text-center">
       <p class="font-semibold mb-2">Imagem do Dia - NASA</p>
       <img src="https://apod.nasa.gov/apod/image/2401/NGC346_Hubble_960.jpg" alt="APOD NASA" class="h-16 object-cover">
+    <!-- Cabeçalho principal -->
+    <div class="bg-white text-black grid grid-cols-5 gap-4 px-6 py-6 border-b border-gray-300">
+      <div class="flex items-center font-bold text-xl">LOGO</div>
+      <div class="col-span-1 flex items-center">Matéria em destaque</div>
+      <div class="col-span-1 flex items-center">🌙 Fase da Lua</div>
+      <div class="col-span-1 flex items-center">📷 APOD NASA</div>
+      <div class="col-span-1 flex items-center">
+        <input type="text" placeholder="Pesquisar..." class="border border-gray-400 rounded-lg p-2 w-full">
+      </div>
     </div>
   </section>
 
@@ -66,8 +95,15 @@
       <a href="#" class="hover:text-blue-600">Tecnologia</a>
       <a href="#" class="hover:text-blue-600">Educação</a>
       <a href="#" class="hover:text-blue-600">Política</a>
+    <!-- Menu de tags -->
+    <div class="bg-gray-100 border-b border-gray-300 flex space-x-6 px-6 py-3 text-sm font-medium">
+      <a href="#" class="hover:text-yellow-500">Economia</a>
+      <a href="#" class="hover:text-yellow-500">Esporte</a>
+      <a href="#" class="hover:text-yellow-500">TV</a>
+      <a href="#" class="hover:text-yellow-500">Ciência</a>
     </div>
   </nav>
+  </header>
 
   <!-- Corpo da Página -->
   <main class="max-w-7xl mx-auto grid grid-cols-12 gap-6 px-6 py-8">
@@ -78,6 +114,14 @@
         <img src="https://placehold.co/800x400" alt="Destaque" class="rounded-lg mb-3 w-full object-cover">
         <h2 class="text-2xl font-bold mb-2">Grande Destaque do Dia: Exploração de Marte</h2>
         <p class="text-gray-700">Acompanhe as últimas descobertas das missões espaciais em Marte e o impacto delas no futuro da exploração espacial.</p>
+  <!-- Corpo -->
+  <main class="pt-48 max-w-7xl mx-auto px-6 grid grid-cols-3 gap-6">
+    <!-- Coluna principal -->
+    <section class="col-span-2 space-y-6">
+      <article class="border-b border-gray-300 pb-6">
+        <img src="https://via.placeholder.com/800x400" alt="Destaque" class="rounded-lg mb-4">
+        <h2 class="text-2xl font-bold mb-2">Título da matéria em destaque</h2>
+        <p class="text-gray-700">Descrição breve da matéria em destaque. Este espaço contém algumas linhas introdutórias sobre o conteúdo apresentado.</p>
       </article>
 
       <!-- Lista de notícias -->
@@ -91,6 +135,9 @@
           <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2">
           <h3 class="text-lg font-semibold mb-1">Título da Postagem 2</h3>
           <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
+          <img src="https://via.placeholder.com/400x200" alt="Post" class="rounded-lg mb-2">
+          <h3 class="text-lg font-semibold">Título do post</h3>
+          <p class="text-gray-600 text-sm">Resumo breve em até quatro linhas sobre o conteúdo...</p>
         </article>
         <article>
           <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2">
@@ -101,6 +148,9 @@
           <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2">
           <h3 class="text-lg font-semibold mb-1">Título da Postagem 4</h3>
           <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
+          <img src="https://via.placeholder.com/400x200" alt="Post" class="rounded-lg mb-2">
+          <h3 class="text-lg font-semibold">Título do post</h3>
+          <p class="text-gray-600 text-sm">Resumo breve em até quatro linhas sobre o conteúdo...</p>
         </article>
       </div>
     </section>
@@ -109,16 +159,28 @@
     <aside class="col-span-4 space-y-6">
       <div class="border rounded-lg shadow p-4">
         <h3 class="text-lg font-bold mb-3">Mais Lidas</h3>
+    <!-- Coluna lateral -->
+    <aside class="space-y-6">
+      <div>
+        <h3 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">Mais Lidas</h3>
         <ul class="space-y-2 text-sm">
           <li><a href="#" class="hover:text-blue-600">Notícia mais lida 1</a></li>
           <li><a href="#" class="hover:text-blue-600">Notícia mais lida 2</a></li>
           <li><a href="#" class="hover:text-blue-600">Notícia mais lida 3</a></li>
           <li><a href="#" class="hover:text-blue-600">Notícia mais lida 4</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Postagem mais lida 1</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Postagem mais lida 2</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Postagem mais lida 3</a></li>
         </ul>
       </div>
       <div class="border rounded-lg shadow p-4">
         <h3 class="text-lg font-bold mb-3">Destaques em Vídeo</h3>
         <img src="https://placehold.co/400x200" alt="Vídeo" class="rounded-lg">
+      <div>
+        <h3 class="text-xl font-bold mb-4 border-b border-gray-300 pb-2">Destaques em Vídeo</h3>
+        <div class="space-y-4">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" class="rounded-lg"></iframe>
+        </div>
       </div>
     </aside>
   </main>
@@ -126,12 +188,19 @@
   <!-- Rodapé -->
   <footer class="bg-black text-white mt-8">
     <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+  <footer class="bg-black text-white mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-4 gap-6">
       <div>
         <h4 class="font-bold mb-3">Institucional</h4>
         <ul class="space-y-2">
           <li><a href="#" class="hover:text-gray-300">Sobre Nós</a></li>
           <li><a href="#" class="hover:text-gray-300">Contato</a></li>
           <li><a href="#" class="hover:text-gray-300">Anuncie</a></li>
+        <h4 class="font-bold mb-4 text-yellow-400">Institucional</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-yellow-400">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Política de Privacidade</a></li>
         </ul>
       </div>
       <div>
@@ -140,6 +209,11 @@
           <li><a href="#" class="hover:text-gray-300">Ciência</a></li>
           <li><a href="#" class="hover:text-gray-300">Tecnologia</a></li>
           <li><a href="#" class="hover:text-gray-300">Educação</a></li>
+        <h4 class="font-bold mb-4 text-yellow-400">Categorias</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-yellow-400">Astronomia</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Filosofia</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
         </ul>
       </div>
       <div>
@@ -149,6 +223,12 @@
           <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook"></i></a>
           <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
           <a href="#" class="hover:text-gray-300"><i class="fab fa-x-twitter"></i></a>
+        <h4 class="font-bold mb-4 text-yellow-400">Redes Sociais</h4>
+        <div class="flex space-x-4 text-yellow-400 text-lg">
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
       <div>
@@ -157,12 +237,28 @@
           <input type="email" placeholder="Seu e-mail" class="px-3 py-2 rounded text-black">
           <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">Assinar</button>
         </form>
+        <h4 class="font-bold mb-4 text-yellow-400">Newsletter</h4>
+        <input type="email" placeholder="Seu e-mail" class="w-full p-2 rounded-lg text-black">
+        <button class="mt-2 bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500">Assinar</button>
       </div>
     </div>
     <div class="bg-gray-900 text-center py-3 text-xs">
       © 2025 - Portal de Conteúdo. Todos os direitos reservados.
+    <div class="bg-gray-900 text-center py-4 text-sm text-gray-400">
+      © 2025 Portal - Todos os direitos reservados.
     </div>
   </footer>
+
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    .social-icon {
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      transform: scale(1.2);
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+    }
+  </style>
 
 </body>
 </html>
