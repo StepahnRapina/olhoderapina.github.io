@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Olho de Rapina – Curiosidades</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Tailwind CDN (inclui todos os utilitários) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+/* Paleta personalizada (amarelo ovo e preto) */
+:root {
+  --egg-yellow: #F5E3B1;   /* Amarelo “ovo” */
+  --black-dark: #1C1C1E;   /* Preto profundo */
+}
+body {
+  background-color: var(--egg-yellow);
+  color: #111;             /* Texto escuro para contraste */
+}
+header, footer {
+  background-color: var(--black-dark);
+  color: #fff;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+</style>
+</head>
+<body class="font-sans">
+
+<!-- ===================== Header ===================== -->
+<header class="sticky top-0 z-50 py-4 px-6 flex items-center justify-between">
+  <div class="text-2xl font-bold flex items-center gap-2">
+    <!-- Ícone de coruja minimalista -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 20h20"/>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v6"/>
+    </svg>
+    Olho de Rapina
+  </div>
+  <nav class="space-x-6">
+    <a href="#" class="hover:text-yellow-400 transition">Home</a>
+    <a href="#" class="hover:text-yellow-400 transition">Curiosidades</a>
+    <a href="#" class="hover:text-yellow-400 transition">Sobre</a>
+    <a href="#" class="hover:text-yellow-400 transition">Contato</a>
+  </nav>
+</header>
+
+<!-- ===================== Hero ===================== -->
+<section class="py-16 px-6 text-center">
+  <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Descubra o que o universo tem guardado!</h1>
+  <p class="text-lg md:text-2xl mb-8 max-w-2xl mx-auto">
+    Olho de Rapina traz as curiosidades mais incríveis, nerd e até um pouquinho estranhas, direto pra sua tela. <br>
+    Pronto para testar sua memória de um verdadeiro geek?
+  </p>
+  <a href="#cards" class="inline-block bg-black text-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-800 transition">
+    Explore agora
+  </a>
+</section>
+
+<!-- ===================== Seção de Cards ===================== -->
+<section id="cards" class="px-6 py-12">
+  <h2 class="text-3xl font-bold text-center mb-8">Curiosidades em destaque</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Card 1 -->
+    <div class="card bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:bg-gray-50">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-2">O Vinho da Vênus</h3>
+        <p class="text-gray-700 mb-4">
+          Descubra por que a atmosfera de Vênus pode ser uma espécie de “vinho” tóxico.
+        </p>
+        <a href="#" class="text-black font-bold hover:text-yellow-400 transition">
+          Ler mais → 
+        </a>
+      </div>
+      <div class="bg-gray-200 h-48 flex items-center justify-center">
+        <!-- Imagem placeholder (pode ser trocada por uma imagem real) -->
+        <img src="https://picsum.photos/400/300?image=1062" alt="Curiosidade 1" class="object-cover w-full h-full">
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:bg-gray-50">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-2">A Máquina de Turing de Papel</h3>
+        <p class="text-gray-700 mb-4">
+          Como uma simples folha de papel pode resolver problemas computacionais!
+        </p>
+        <a href="#" class="text-black font-bold hover:text-yellow-400 transition">
+          Ler mais → 
+        </a>
+      </div>
+      <div class="bg-gray-200 h-48 flex items-center justify-center">
+        <img src="https://picsum.photos/400/300?image=1050" alt="Curiosidade 2" class="object-cover w-full h-full">
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:bg-gray-50">
+      <div class="p-6">
+        <h3 class="text-2xl font-semibold mb-2">Códigos Escondidos nas Galáxias</h3>
+        <p class="text-gray-700 mb-4">
+          Como padrões de linguagem são detectados em sinais de rádio cósmicos.
+        </p>
+        <a href="#" class="text-black font-bold hover:text-yellow-400 transition">
+          Ler mais → 
+        </a>
+      </div>
+      <div class="bg-gray-200 h-48 flex items-center justify-center">
+        <img src="https://picsum.photos/400/300?image=1049" alt="Curiosidade 3" class="object-cover w-full h-full">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Seção Sobre ===================== -->
+<section class="bg-white py-12 px-6">
+  <h2 class="text-3xl font-bold text-center mb-8">Sobre o Olho de Rapina</h2>
+  <p class="max-w-3xl mx-auto text-center text-gray-700">
+    Nosso objetivo é levar o melhor conteúdo geek e curiosidades fascinantes direto ao seu navegador. Seja você um nerd de coração ou apenas alguém que curte um bom fato estranho, aqui você encontra informação de qualidade com um toque de humor nerd.
+  </p>
+</section>
+
+<!-- ===================== Rodapé ===================== -->
+<footer class="py-6 px-6 text-center">
+  <p>&copy; 2025 Olho de Rapina. Todos os direitos reservados.</p>
+  <p class="mt-2">
+    <a href="#" class="text-yellow-400 hover:underline">Termos de Uso</a> •
+    <a href="#" class="text-yellow-400 hover:underline">Política de Privacidade</a>
+  </p>
+</footer>
+
+</body>
+</html>
