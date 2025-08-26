@@ -1,158 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal - Página Inicial</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">   <style>
-    body { font-family: 'Roboto', sans-serif; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal - Página Inicial</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- SEO -->
+  <meta name="description" content="Olho de Rapina - Portal de ciência, filosofia e conhecimento com conteúdo acessível e envolvente.">
+
+  <link rel="stylesheet" href="style.css"> <!-- CSS separado -->
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
 </head>
+
 <body class="bg-white text-black">
 
-    <header class="bg-black text-white border-b border-gray-700 fixed top-0 left-0 w-full z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3 text-sm font-medium">
-            <nav class="flex space-x-6">
-        <a href="#" class="hover:text-yellow-400">Home</a>
-        <a href="#" class="hover:text-yellow-400">Astronomia</a>
-        <a href="#" class="hover:text-yellow-400">Filosofia</a>
-        <a href="#" class="hover:text-yellow-400">Sobre</a>
-      </nav>
-            <div class="flex space-x-4 text-lg">
-        <a href="#" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
-        <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-  </header>
+  <!-- Barra de Menu Superior (fixa) -->
+  <header class="bg-black text-white border-b border-gray-700 fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3 text-sm font-medium">
+      <!-- Menu Esquerda -->
+      <nav class="flex space-x-6">
+        <a href="#" class="hover:text-yellow-400">Home</a>
+        <a href="#" class="hover:text-yellow-400">Astronomia</a>
+        <a href="#" class="hover:text-yellow-400">Filosofia</a>
+        <a href="#" class="hover:text-yellow-400">Sobre</a>
+      </nav>
+      <!-- Ícones Direita -->
+      <div class="flex space-x-4 text-lg">
+        <a href="#" aria-label="YouTube" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter/X" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </header>
 
-    <div class="h-14"></div>
+  <!-- Espaço para compensar header fixo -->
+  <div class="h-14"></div>
 
-    <section class="border-b" style="background-color: #fdf489;">
-    <div class="max-w-7xl mx-auto grid grid-cols-5 gap-6 px-6 py-6">
-            <div class="flex flex-col items-center justify-center">
-        <img src="logo.png" alt="Logo do Site" class="h-20">
-        <h2 class="text-black font-bold text-xl mt-2">Olho de Rapina</h2>
-      </div>
-            <div class="col-span-2 flex flex-col justify-center">
-        <h2 class="text-xl font-bold leading-snug">Matéria em Destaque: Buracos Negros e a Teoria da Relatividade</h2>
-        <p class="text-sm text-gray-600 mt-2">Um olhar profundo sobre os mistérios do universo e como a física moderna explica fenômenos cósmicos.</p>
-      </div>
-            <div class="flex flex-col items-center justify-center text-center">
-        <p class="font-semibold mb-2">Fase da Lua</p>
-        <img src="https://www.timeanddate.com/scripts/moon.php" alt="Fase da Lua" class="h-16">
-      </div>
-            <div class="flex flex-col items-center justify-center text-center">
-        <p class="font-semibold mb-2">Imagem do Dia - NASA</p>
-        <img src="https://apod.nasa.gov/apod/astropix.html" alt="APOD NASA" class="h-16 object-cover">
-      </div>
-    </div>
-  </section>
+  <!-- Cabeçalho Principal (com fundo amarelo) -->
+  <section class="w-full bg-[#fdf489]">
+    <div class="max-w-7xl mx-auto grid grid-cols-5 gap-6 px-6 py-6 border-b">
 
-    <nav class="bg-gray-100 border-b text-sm font-medium">
-    <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
-      <a href="#" class="hover:text-yellow-500">Economia</a>
-      <a href="#" class="hover:text-yellow-500">Esporte</a>
-      <a href="#" class="hover:text-yellow-500">TV</a>
-      <a href="#" class="hover:text-yellow-500">Ciência</a>
-      <a href="#" class="hover:text-yellow-500">Tecnologia</a>
-      <a href="#" class="hover:text-yellow-500">Educação</a>
-      <a href="#" class="hover:text-yellow-500">Política</a>
-    </div>
-  </nav>
+      <!-- Logo -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <img src="logo.png" alt="Logo do Site" class="h-20 max-h-20 w-auto" loading="lazy">
+        <h1 class="mt-2 text-2xl font-bold text-black hover:text-yellow-600 transition-colors">
+          Olho de Rapina
+        </h1>
+      </div>
 
-    <main class="max-w-7xl mx-auto grid grid-cols-12 gap-6 px-6 py-8">
-        <section class="col-span-12 lg:col-span-8 space-y-6">
-            <article class="border-b pb-6">
-        <img src="https://placehold.co/800x400" alt="Destaque" class="rounded-lg mb-3 w-full object-cover">
-        <h2 class="text-2xl font-bold mb-2 text-yellow-600">Grande Destaque do Dia: Exploração de Marte</h2>
-        <p class="text-gray-700">Acompanhe as últimas descobertas das missões espaciais em Marte e o impacto delas no futuro da exploração espacial.</p>
-      </article>
+      <!-- Matéria em destaque -->
+      <div class="col-span-2 flex flex-col justify-center">
+        <h2 class="text-xl font-bold leading-snug">Matéria em Destaque: Buracos Negros e a Teoria da Relatividade</h2>
+        <p class="text-sm text-gray-700 mt-2">Um olhar profundo sobre os mistérios do universo e como a física moderna explica fenômenos cósmicos.</p>
+      </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <article>
-          <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2">
-          <h3 class="text-lg font-semibold mb-1">Título da Postagem 1</h3>
-          <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
-        </article>
-        <article>
-          <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2">
-          <h3 class="text-lg font-semibold mb-1">Título da Postagem 2</h3>
-          <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
-        </article>
-        <article>
-          <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2">
-          <h3 class="text-lg font-semibold mb-1">Título da Postagem 3</h3>
-          <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
-        </article>
-        <article>
-          <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2">
-          <h3 class="text-lg font-semibold mb-1">Título da Postagem 4</h3>
-          <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
-        </article>
-      </div>
-    </section>
+      <!-- Fase da Lua -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <p class="font-semibold mb-2">Fase da Lua</p>
+        <img src="https://www.timeanddate.com/scripts/moon.php" alt="Fase da Lua" class="h-16" loading="lazy">
+      </div>
 
-        <aside class="col-span-12 lg:col-span-4 space-y-6">
-      <div class="border rounded-lg shadow p-4">
-        <h3 class="text-lg font-bold mb-3">Mais Lidas</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-yellow-500">Notícia mais lida 1</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Notícia mais lida 2</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Notícia mais lida 3</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Notícia mais lida 4</a></li>
-        </ul>
-      </div>
-      <div class="border rounded-lg shadow p-4">
-        <h3 class="text-lg font-bold mb-3">Destaques em Vídeo</h3>
-        <img src="https://placehold.co/400x200" alt="Vídeo" class="rounded-lg">
-      </div>
-    </aside>
-  </main>
+      <!-- APOD NASA -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <p class="font-semibold mb-2">Imagem do Dia - NASA</p>
+        <img src="https://apod.nasa.gov/apod/image/2508/MilkyWay_Saturn_Jupiter.jpg" alt="APOD NASA" class="h-16 object-cover rounded" loading="lazy">
+      </div>
 
-    <footer class="bg-black text-white mt-8">
-    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
-      <div>
-        <h4 class="font-bold mb-3 text-yellow-500">Institucional</h4>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-yellow-400">Sobre Nós</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Anuncie</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3 text-yellow-500">Categorias</h4>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Tecnologia</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Educação</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3 text-yellow-500">Redes Sociais</h4>
-        <div class="flex space-x-4 text-lg">
-          <a href="#" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
-          <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
-        </div>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3 text-yellow-500">Newsletter</h4>
-        <form class="flex flex-col space-y-2">
-          <input type="email" placeholder="Seu e-mail" class="px-3 py-2 rounded text-black">
-          <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded">Assinar</button>
-        </form>
-      </div>
-    </div>
-    <div class="bg-gray-900 text-center py-3 text-xs">
-      © 2025 - Portal de Conteúdo. Todos os direitos reservados.
-    </div>
-  </footer>
+    </div>
+  </section>
+
+  <!-- Sessão de Categorias -->
+  <nav class="bg-gray-100 border-b text-sm font-medium">
+    <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
+      <a href="#" class="hover:text-yellow-500">Economia</a>
+      <a href="#" class="hover:text-yellow-500">Esporte</a>
+      <a href="#" class="hover:text-yellow-500">TV</a>
+      <a href="#" class="hover:text-yellow-500">Ciência</a>
+      <a href="#" class="hover:text-yellow-500">Tecnologia</a>
+      <a href="#" class="hover:text-yellow-500">Educação</a>
+      <a href="#" class="hover:text-yellow-500">Política</a>
+    </div>
+  </nav>
+
+  <!-- Corpo da Página -->
+  <main class="max-w-7xl mx-auto grid grid-cols-12 gap-6 px-6 py-8">
+
+    <!-- Coluna Principal -->
+    <section class="col-span-12 lg:col-span-8 space-y-6">
+
+      <!-- Postagem em destaque grande -->
+      <article class="border-b pb-6">
+        <img src="https://placehold.co/800x400" alt="Destaque" class="rounded-lg mb-3 w-full object-cover" loading="lazy">
+        <h2 class="text-2xl font-bold mb-2 text-yellow-600">Grande Destaque do Dia: Exploração de Marte</h2>
+        <p class="text-gray-700">Acompanhe as últimas descobertas das missões espaciais em Marte e o impacto delas no futuro da exploração espacial.</p>
+      </article>
+
+      <!-- Lista de notícias -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <article>
+          <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2" loading="lazy">
+          <h3 class="text-lg font-semibold mb-1">Título da Postagem 1</h3>
+          <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
+        </article>
+        <article>
+          <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2" loading="lazy">
+          <h3 class="text-lg font-semibold mb-1">Título da Postagem 2</h3>
+          <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
+        </article>
+        <article>
+          <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2" loading="lazy">
+          <h3 class="text-lg font-semibold mb-1">Título da Postagem 3</h3>
+          <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
+        </article>
+        <article>
+          <img src="https://placehold.co/400x200" alt="Postagem" class="rounded-lg mb-2" loading="lazy">
+          <h3 class="text-lg font-semibold mb-1">Título da Postagem 4</h3>
+          <p class="text-sm text-gray-600">Resumo rápido de até quatro linhas sobre a notícia ou artigo publicado no portal...</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Coluna Lateral -->
+    <aside class="col-span-12 lg:col-span-4 space-y-6">
+      <div class="border rounded-lg shadow p-4">
+        <h3 class="text-lg font-bold mb-3">Mais Lidas</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-yellow-500">Notícia mais lida 1</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Notícia mais lida 2</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Notícia mais lida 3</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Notícia mais lida 4</a></li>
+        </ul>
+      </div>
+      <div class="border rounded-lg shadow p-4">
+        <h3 class="text-lg font-bold mb-3">Destaques em Vídeo</h3>
+        <img src="https://placehold.co/400x200" alt="Vídeo" class="rounded-lg" loading="lazy">
+      </div>
+    </aside>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-black text-white mt-8">
+    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+      <div>
+        <h4 class="font-bold mb-3 text-yellow-500">Institucional</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-yellow-400">Sobre Nós</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Anuncie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-3 text-yellow-500">Categorias</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Tecnologia</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Educação</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-3 text-yellow-500">Redes Sociais</h4>
+        <div class="flex space-x-4 text-lg">
+          <a href="#" aria-label="YouTube" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter/X" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-3 text-yellow-500">Newsletter</h4>
+        <form class="flex flex-col space-y-2">
+          <p class="text-xs text-gray-400">Receba novidades direto no seu e-mail:</p>
+          <input type="email" placeholder="Seu e-mail" class="px-3 py-2 rounded text-black">
+          <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded">Assinar</button>
+        </form>
+      </div>
+    </div>
+    <div class="bg-gray-900 text-center py-3 text-xs">
+      © 2025 - Portal de Conteúdo. Todos os direitos reservados.
+    </div>
+  </footer>
 
 </body>
 </html>
