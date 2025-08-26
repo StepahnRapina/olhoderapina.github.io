@@ -16,143 +16,172 @@
   <!-- FontAwesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-  <!-- Folha de estilo externa -->
-  <link rel="stylesheet" href="css\style.css">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    img { max-width: 100%; height: auto; } /* evita distorção no celular */
+  </style>
 </head>
-<body>
+<body class="bg-gray-100 text-black">
 
-  <!-- Barra de Menu Superior -->
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Astronomia</a>
-        <a href="#">Filosofia</a>
-        <a href="#">Sobre</a>
+  <!-- Barra de Menu Superior (fixa) -->
+  <header class="bg-black text-white border-b border-gray-700 fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3 text-sm font-medium">
+      <!-- Menu Esquerda -->
+      <nav class="flex space-x-6">
+        <a href="#" class="hover:text-yellow-400">Home</a>
+        <a href="#" class="hover:text-yellow-400">Astronomia</a>
+        <a href="#" class="hover:text-yellow-400">Filosofia</a>
+        <a href="#" class="hover:text-yellow-400">Sobre</a>
       </nav>
-      <div class="social-icons">
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+      <!-- Ícones Direita -->
+      <div class="flex space-x-4 text-lg">
+        <a href="#" aria-label="YouTube" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter/X" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
       </div>
     </div>
   </header>
 
+  <!-- Espaço para compensar header fixo -->
   <div class="h-14"></div>
 
-  <!-- Cabeçalho principal -->
-  <section class="header-main">
-    <div class="grid">
-      <div class="logo">
-        <img src="logo.png" alt="Logo do Site" loading="lazy">
-        <h1>Olho de Rapina</h1>
+  <!-- Cabeçalho Principal (com fundo amarelo) -->
+  <section class="w-full bg-[#fdf489] shadow-md">
+    <div class="max-w-7xl mx-auto grid grid-cols-5 gap-6 px-6 py-6 border-b">
+      <!-- Logo -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <img src="logo.png" alt="Logo do Site" class="h-20 w-auto" loading="lazy">
+        <h1 class="mt-2 text-2xl font-bold text-black hover:text-yellow-600 transition-colors">
+          Olho de Rapina
+        </h1>
       </div>
 
-      <div class="featured">
-        <h2>Matéria em Destaque: Buracos Negros e a Relatividade</h2>
-        <p>Um olhar profundo sobre os mistérios do universo e como a física moderna explica fenômenos cósmicos.</p>
+      <!-- Matéria em destaque no header -->
+      <div class="col-span-2 flex flex-col justify-center">
+        <h2 class="text-xl font-bold leading-snug">Matéria em Destaque: Buracos Negros e a Relatividade</h2>
+        <p class="text-sm text-gray-700 mt-2">Um olhar profundo sobre os mistérios do universo e como a física moderna explica fenômenos cósmicos.</p>
       </div>
 
-      <div class="moon">
-        <p>Fase da Lua</p>
-        <img src="https://www.timeanddate.com/scripts/moon.php" alt="Fase da Lua" loading="lazy">
+      <!-- Fase da Lua -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <p class="font-semibold mb-2">Fase da Lua</p>
+        <img src="https://www.timeanddate.com/scripts/moon.php" alt="Fase da Lua" class="h-16" loading="lazy">
       </div>
 
-      <div class="apod">
-        <p>Imagem do Dia - NASA</p>
-        <img src="https://apod.nasa.gov/apod/image/2508/MilkyWay_Saturn_Jupiter.jpg" alt="APOD NASA" loading="lazy">
+      <!-- APOD NASA -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <p class="font-semibold mb-2">Imagem do Dia - NASA</p>
+        <img src="https://apod.nasa.gov/apod/image/2508/MilkyWay_Saturn_Jupiter.jpg" alt="APOD NASA" class="h-16 object-cover rounded" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- Categorias -->
-  <nav class="categories">
-    <div class="container">
-      <a href="#">Economia</a>
-      <a href="#">Esporte</a>
-      <a href="#">TV</a>
-      <a href="#">Ciência</a>
-      <a href="#">Tecnologia</a>
-      <a href="#">Educação</a>
-      <a href="#">Política</a>
+  <!-- Sessão de Categorias -->
+  <nav class="bg-gray-100 border-b text-sm font-medium shadow-sm">
+    <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
+      <a href="#" class="hover:text-yellow-500">Economia</a>
+      <a href="#" class="hover:text-yellow-500">Esporte</a>
+      <a href="#" class="hover:text-yellow-500">TV</a>
+      <a href="#" class="hover:text-yellow-500">Ciência</a>
+      <a href="#" class="hover:text-yellow-500">Tecnologia</a>
+      <a href="#" class="hover:text-yellow-500">Educação</a>
+      <a href="#" class="hover:text-yellow-500">Política</a>
     </div>
   </nav>
 
-  <!-- Conteúdo principal -->
-  <main>
-    <div class="main-grid">
-      <div class="card">
-        <img src="https://placehold.co/800x400" alt="Imagem de notícia em destaque">
-        <h2>Título da Notícia em Destaque</h2>
-        <p>Descrição breve da notícia de destaque. Um resumo introdutório para atrair o leitor a continuar a leitura.</p>
+  <!-- Conteúdo Principal -->
+  <main class="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-3 gap-6">
+    
+    <!-- Coluna Central (destaques + grid) -->
+    <section class="lg:col-span-2 space-y-6">
+      <!-- Notícia de destaque -->
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <img src="https://placehold.co/800x400" alt="Imagem de notícia em destaque" class="rounded-lg mb-3 w-full object-cover" loading="lazy">
+        <h2 class="text-xl font-bold mb-2">Título da Notícia em Destaque</h2>
+        <p class="text-gray-700">Descrição breve da notícia de destaque. Um resumo introdutório para atrair o leitor a continuar a leitura.</p>
       </div>
 
       <!-- Grid de notícias -->
-      <div class="card">
-        <img src="https://placehold.co/300x200" alt="Imagem notícia 1">
-        <h3>Notícia 1</h3>
-        <p>Resumo breve da notícia 1.</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg shadow-md p-3">
+          <img src="https://placehold.co/300x200" alt="Imagem notícia 1" class="rounded mb-2 w-full object-cover" loading="lazy">
+          <h3 class="font-bold">Notícia 1</h3>
+          <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-3">
+          <img src="https://placehold.co/300x200" alt="Imagem notícia 2" class="rounded mb-2 w-full object-cover" loading="lazy">
+          <h3 class="font-bold">Notícia 2</h3>
+          <p class="text-sm text-gray-600">Resumo breve da notícia 2.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-3">
+          <img src="https://placehold.co/300x200" alt="Imagem notícia 3" class="rounded mb-2 w-full object-cover" loading="lazy">
+          <h3 class="font-bold">Notícia 3</h3>
+          <p class="text-sm text-gray-600">Resumo breve da notícia 3.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-3">
+          <img src="https://placehold.co/300x200" alt="Imagem notícia 4" class="rounded mb-2 w-full object-cover" loading="lazy">
+          <h3 class="font-bold">Notícia 4</h3>
+          <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://placehold.co/300x200" alt="Imagem notícia 2">
-        <h3>Notícia 2</h3>
-        <p>Resumo breve da notícia 2.</p>
+    </section>
+
+    <!-- Coluna Lateral (mais lidas, widgets) -->
+    <aside class="space-y-6">
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <h3 class="font-bold mb-3 border-b pb-2">Mais Lidas</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-yellow-500">Matéria popular 1 sobre ciência</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Matéria popular 2 sobre filosofia</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Matéria popular 3 sobre espaço</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Matéria popular 4 sobre educação</a></li>
+        </ul>
       </div>
-      <div class="card">
-        <img src="https://placehold.co/300x200" alt="Imagem notícia 3">
-        <h3>Notícia 3</h3>
-        <p>Resumo breve da notícia 3.</p>
+
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <h3 class="font-bold mb-3 border-b pb-2">Newsletter</h3>
+        <input type="email" placeholder="Digite seu e-mail" class="border p-2 rounded w-full mb-2">
+        <button class="bg-yellow-400 text-black px-4 py-2 rounded w-full hover:bg-yellow-500 transition">Inscrever-se</button>
       </div>
-      <div class="card">
-        <img src="https://placehold.co/300x200" alt="Imagem notícia 4">
-        <h3>Notícia 4</h3>
-        <p>Resumo breve da notícia 4.</p>
-      </div>
-    </div>
+    </aside>
+
   </main>
 
-  <!-- Newsletter -->
-  <section class="newsletter">
-    <p>Receba novidades direto no seu e-mail:</p>
-    <input type="email" placeholder="Digite seu e-mail">
-    <button>Inscrever-se</button>
-  </section>
-
   <!-- Rodapé clássico -->
-  <footer>
+  <footer class="bg-black text-white mt-8">
     <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
       <div>
-        <h4>Institucional</h4>
-        <ul>
-          <li><a href="#">Sobre Nós</a></li>
-          <li><a href="#">Contato</a></li>
-          <li><a href="#">Anuncie</a></li>
+        <h4 class="font-bold mb-3 text-yellow-500">Institucional</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-yellow-400">Sobre Nós</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Anuncie</a></li>
         </ul>
       </div>
       <div>
-        <h4>Categorias</h4>
-        <ul>
-          <li><a href="#">Ciência</a></li>
-          <li><a href="#">Tecnologia</a></li>
-          <li><a href="#">Educação</a></li>
+        <h4 class="font-bold mb-3 text-yellow-500">Categorias</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Tecnologia</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Educação</a></li>
         </ul>
       </div>
       <div>
-        <h4>Redes Sociais</h4>
+        <h4 class="font-bold mb-3 text-yellow-500">Redes Sociais</h4>
         <div class="flex space-x-4 text-lg">
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter/X" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
       <div>
-        <h4>Newsletter</h4>
-        <form>
-          <p>Receba novidades direto no seu e-mail:</p>
-          <input type="email" placeholder="Seu e-mail">
-          <button type="submit">Assinar</button>
+        <h4 class="font-bold mb-3 text-yellow-500">Newsletter</h4>
+        <form class="flex flex-col space-y-2">
+          <p class="text-xs text-gray-400">Receba novidades direto no seu e-mail:</p>
+          <input type="email" placeholder="Seu e-mail" class="px-3 py-2 rounded text-black">
+          <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded">Assinar</button>
         </form>
       </div>
     </div>
@@ -161,5 +190,4 @@
     </div>
   </footer>
 
-</body>
-</html>
+</body
