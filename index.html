@@ -18,6 +18,7 @@
 
   <style>
     body { font-family: 'Roboto', sans-serif; }
+    img { max-width: 100%; height: auto; } /* evita distorção no celular */
   </style>
 </head>
 <body class="bg-gray-100 text-black">
@@ -50,7 +51,7 @@
     <div class="max-w-7xl mx-auto grid grid-cols-5 gap-6 px-6 py-6 border-b">
       <!-- Logo -->
       <div class="flex flex-col items-center justify-center text-center">
-        <img src="logo.png" alt="Logo do Site" class="h-20 max-h-20 w-auto" loading="lazy">
+        <img src="logo.png" alt="Logo do Site" class="h-20 w-auto" loading="lazy">
         <h1 class="mt-2 text-2xl font-bold text-black hover:text-yellow-600 transition-colors">
           Olho de Rapina
         </h1>
@@ -89,48 +90,65 @@
     </div>
   </nav>
 
-  <!-- Conteúdo Principal (do código atual) -->
-  <main class="container mx-auto px-4 py-8">
-    <!-- Notícia de destaque -->
-    <div class="bg-white rounded-lg shadow-md p-4 mb-8">
-      <img src="https://placehold.co/800x400" alt="Imagem de notícia em destaque" class="rounded-lg mb-3 w-full object-cover" loading="lazy">
-      <h2 class="text-xl font-bold mb-2">Título da Notícia em Destaque</h2>
-      <p class="text-gray-700">Descrição breve da notícia de destaque. Um resumo introdutório para atrair o leitor a continuar a leitura.</p>
-    </div>
+  <!-- Conteúdo Principal -->
+  <main class="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-3 gap-6">
+    
+    <!-- Coluna Central (destaques + grid) -->
+    <section class="lg:col-span-2 space-y-6">
+      <!-- Notícia de destaque -->
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <img src="https://placehold.co/800x400" alt="Imagem de notícia em destaque" class="rounded-lg mb-3 w-full object-cover" loading="lazy">
+        <h2 class="text-xl font-bold mb-2">Título da Notícia em Destaque</h2>
+        <p class="text-gray-700">Descrição breve da notícia de destaque. Um resumo introdutório para atrair o leitor a continuar a leitura.</p>
+      </div>
 
-    <!-- Grid de notícias -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="bg-white rounded-lg shadow-md p-3">
-        <img src="https://placehold.co/300x200" alt="Imagem ilustrativa da notícia 1" class="rounded mb-2 w-full object-cover" loading="lazy">
-        <h3 class="font-bold">Notícia 1</h3>
-        <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
+      <!-- Grid de notícias -->
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg shadow-md p-3">
+          <img src="https://placehold.co/300x200" alt="Imagem notícia 1" class="rounded mb-2 w-full object-cover" loading="lazy">
+          <h3 class="font-bold">Notícia 1</h3>
+          <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-3">
+          <img src="https://placehold.co/300x200" alt="Imagem notícia 2" class="rounded mb-2 w-full object-cover" loading="lazy">
+          <h3 class="font-bold">Notícia 2</h3>
+          <p class="text-sm text-gray-600">Resumo breve da notícia 2.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-3">
+          <img src="https://placehold.co/300x200" alt="Imagem notícia 3" class="rounded mb-2 w-full object-cover" loading="lazy">
+          <h3 class="font-bold">Notícia 3</h3>
+          <p class="text-sm text-gray-600">Resumo breve da notícia 3.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-3">
+          <img src="https://placehold.co/300x200" alt="Imagem notícia 4" class="rounded mb-2 w-full object-cover" loading="lazy">
+          <h3 class="font-bold">Notícia 4</h3>
+          <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
+        </div>
       </div>
-      <div class="bg-white rounded-lg shadow-md p-3">
-        <img src="https://placehold.co/300x200" alt="Imagem ilustrativa da notícia 2" class="rounded mb-2 w-full object-cover" loading="lazy">
-        <h3 class="font-bold">Notícia 2</h3>
-        <p class="text-sm text-gray-600">Resumo breve da notícia 2.</p>
+    </section>
+
+    <!-- Coluna Lateral (mais lidas, widgets) -->
+    <aside class="space-y-6">
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <h3 class="font-bold mb-3 border-b pb-2">Mais Lidas</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-yellow-500">Matéria popular 1 sobre ciência</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Matéria popular 2 sobre filosofia</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Matéria popular 3 sobre espaço</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Matéria popular 4 sobre educação</a></li>
+        </ul>
       </div>
-      <div class="bg-white rounded-lg shadow-md p-3">
-        <img src="https://placehold.co/300x200" alt="Imagem ilustrativa da notícia 3" class="rounded mb-2 w-full object-cover" loading="lazy">
-        <h3 class="font-bold">Notícia 3</h3>
-        <p class="text-sm text-gray-600">Resumo breve da notícia 3.</p>
+
+      <div class="bg-white rounded-lg shadow-md p-4">
+        <h3 class="font-bold mb-3 border-b pb-2">Newsletter</h3>
+        <input type="email" placeholder="Digite seu e-mail" class="border p-2 rounded w-full mb-2">
+        <button class="bg-yellow-400 text-black px-4 py-2 rounded w-full hover:bg-yellow-500 transition">Inscrever-se</button>
       </div>
-      <div class="bg-white rounded-lg shadow-md p-3">
-        <img src="https://placehold.co/300x200" alt="Imagem ilustrativa da notícia 4" class="rounded mb-2 w-full object-cover" loading="lazy">
-        <h3 class="font-bold">Notícia 4</h3>
-        <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
-      </div>
-    </div>
+    </aside>
+
   </main>
 
-  <!-- Newsletter -->
-  <section class="bg-white py-6 shadow-inner text-center">
-    <p class="text-xs text-gray-400 mb-2">Receba novidades direto no seu e-mail:</p>
-    <input type="email" placeholder="Digite seu e-mail" class="border p-2 rounded w-64">
-    <button class="bg-yellow-400 text-black px-4 py-2 rounded ml-2 hover:bg-yellow-500 transition">Inscrever-se</button>
-  </section>
-
-  <!-- Rodapé clássico (do código antigo) -->
+  <!-- Rodapé clássico -->
   <footer class="bg-black text-white mt-8">
     <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
       <div>
@@ -172,5 +190,4 @@
     </div>
   </footer>
 
-</body>
-</html>
+</body
