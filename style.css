@@ -1,0 +1,43 @@
+/* Fonte padrão */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Ícones sociais amarelos com hover minimalista */
+.social-icons a {
+  color: #FFD700;
+  transition: all 0.3s ease;
+}
+.social-icons a:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.7));
+}
+
+/* Menu principal */
+.menu-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.menu-link:hover,
+.menu-link.active {
+  color: #FFD700;
+}
+
+/* Tags (categorias) */
+.tag-link {
+  color: #000000;
+  transition: color 0.3s ease;
+}
+.tag-link:hover,
+.tag-link.active {
+  color: #FFD700;
+}
+
+/* Rodapé links */
+.footer-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.footer-link:hover {
+  color: #FFEA00;
+}
