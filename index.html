@@ -4,8 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal - Página Inicial</title>
-  <link rel="stylesheet" href="../dist/output.css">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- FontAwesome para ícones -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="font-roboto bg-white text-black">
 
@@ -14,10 +27,10 @@
     <!-- Barra superior -->
     <div class="bg-black text-white flex justify-between items-center px-6 py-3 shadow-md">
       <nav class="flex space-x-6">
-        <a href="#" class="hover:text-yellow-400">Home</a>
-        <a href="#" class="hover:text-yellow-400">Astronomia</a>
-        <a href="#" class="hover:text-yellow-400">Filosofia</a>
-        <a href="#" class="hover:text-yellow-400">Sobre</a>
+        <a href="#" class="menu-link">Home</a>
+        <a href="#" class="menu-link">Astronomia</a>
+        <a href="#" class="menu-link">Filosofia</a>
+        <a href="#" class="menu-link">Sobre</a>
       </nav>
       <div class="flex space-x-5 text-yellow-400 text-lg social-icons">
         <a href="#"><i class="fab fa-youtube"></i></a>
@@ -49,13 +62,13 @@
 
     <!-- Menu de categorias -->
     <div class="bg-gray-100 border-b border-gray-300 flex space-x-6 px-6 py-3 text-sm font-medium overflow-x-auto">
-      <a href="#" class="hover:text-yellow-500">Economia</a>
-      <a href="#" class="hover:text-yellow-500">Esporte</a>
-      <a href="#" class="hover:text-yellow-500">TV</a>
-      <a href="#" class="hover:text-yellow-500">Ciência</a>
-      <a href="#" class="hover:text-yellow-500">Tecnologia</a>
-      <a href="#" class="hover:text-yellow-500">Educação</a>
-      <a href="#" class="hover:text-yellow-500">Política</a>
+      <a href="#" class="tag-link">Economia</a>
+      <a href="#" class="tag-link">Esporte</a>
+      <a href="#" class="tag-link">TV</a>
+      <a href="#" class="tag-link">Ciência</a>
+      <a href="#" class="tag-link">Tecnologia</a>
+      <a href="#" class="tag-link">Educação</a>
+      <a href="#" class="tag-link">Política</a>
     </div>
   </header>
 
@@ -113,50 +126,5 @@
       <div>
         <h4 class="font-bold mb-4 text-yellow-500">Institucional</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-yellow-400">Sobre nós</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Política de Privacidade</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4 text-yellow-500">Categorias</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-yellow-400">Astronomia</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Filosofia</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4 text-yellow-500">Redes Sociais</h4>
-        <div class="flex space-x-4 text-yellow-400 text-lg social-icons">
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-        </div>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4 text-yellow-500">Newsletter</h4>
-        <input type="email" placeholder="Seu e-mail" class="w-full p-2 rounded-lg text-black">
-        <button class="mt-2 bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500">Assinar</button>
-      </div>
-    </div>
-    <div class="bg-gray-900 text-center py-4 text-sm text-gray-400">
-      © 2025 Portal - Todos os direitos reservados.
-    </div>
-  </footer>
-
-  <!-- Estilo extra para ícones sociais -->
-  <style>
-    .social-icons a {
-      color: #FFD700;
-      transition: all 0.3s ease;
-    }
-    .social-icons a:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.7));
-    }
-  </style>
-
-</body>
-</html>
+          <li><a href="#" class="footer-link">Sobre nós</a></li>
+          <li><a href
