@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Olho de Rapina - Portal de ciência, filosofia e conhecimento. Notícias, artigos e conteúdos em linguagem simples e acessível.">
   <title>Olho de Rapina</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
 
   <!-- Fonte Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -12,48 +13,83 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- FontAwesome para ícones -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
     body { font-family: 'Roboto', sans-serif; }
   </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 text-black">
 
-  <!-- Navbar -->
-  <nav class="bg-yellow-300 px-4 py-3 flex justify-between items-center shadow-md">
-    <div class="text-lg font-bold text-black">Menu</div>
-
-    <!-- Menu Desktop -->
-    <div class="hidden md:flex space-x-4">
-      <a href="#" class="text-black hover:underline">Início</a>
-      <a href="#" class="text-black hover:underline">Artigos</a>
-      <a href="#" class="text-black hover:underline">Sobre</a>
-      <a href="#" class="text-black hover:underline">Contato</a>
-    </div>
-
-    <!-- Botão mobile -->
-    <button class="md:hidden text-black" aria-label="Abrir menu">
-      <i class="fas fa-bars"></i>
-    </button>
-  </nav>
-
-  <!-- Header com fundo amarelo -->
-  <header class="bg-[#ffffae] text-center py-6 shadow-md">
-    <!-- Logo responsiva -->
-    <img src="logo.png" alt="Logo Olho de Rapina" class="h-20 max-h-20 w-auto mx-auto" loading="lazy">
-    <h1 class="mt-2 text-2xl font-bold text-black">Olho de Rapina</h1>
-
-    <!-- Fases da Lua + Imagem NASA -->
-    <div class="mt-4 flex justify-center items-center gap-4">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/100px-FullMoon2010.jpg" alt="Fase atual da Lua" class="h-16 rounded" loading="lazy">
-
-      <img src="https://apod.nasa.gov/apod/image/2508/MilkyWay_Saturn_Jupiter.jpg" alt="Imagem do dia da NASA (APOD)" class="h-16 object-cover rounded" loading="lazy">
+  <!-- Barra de Menu Superior (fixa) -->
+  <header class="bg-black text-white border-b border-gray-700 fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3 text-sm font-medium">
+      <!-- Menu Esquerda -->
+      <nav class="flex space-x-6">
+        <a href="#" class="hover:text-yellow-400">Home</a>
+        <a href="#" class="hover:text-yellow-400">Astronomia</a>
+        <a href="#" class="hover:text-yellow-400">Filosofia</a>
+        <a href="#" class="hover:text-yellow-400">Sobre</a>
+      </nav>
+      <!-- Ícones Direita -->
+      <div class="flex space-x-4 text-lg">
+        <a href="#" aria-label="YouTube" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter/X" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
+      </div>
     </div>
   </header>
 
-  <!-- Conteúdo Principal -->
+  <!-- Espaço para compensar header fixo -->
+  <div class="h-14"></div>
+
+  <!-- Cabeçalho Principal (com fundo amarelo) -->
+  <section class="w-full bg-[#fdf489] shadow-md">
+    <div class="max-w-7xl mx-auto grid grid-cols-5 gap-6 px-6 py-6 border-b">
+      <!-- Logo -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <img src="logo.png" alt="Logo do Site" class="h-20 max-h-20 w-auto" loading="lazy">
+        <h1 class="mt-2 text-2xl font-bold text-black hover:text-yellow-600 transition-colors">
+          Olho de Rapina
+        </h1>
+      </div>
+
+      <!-- Matéria em destaque no header -->
+      <div class="col-span-2 flex flex-col justify-center">
+        <h2 class="text-xl font-bold leading-snug">Matéria em Destaque: Buracos Negros e a Relatividade</h2>
+        <p class="text-sm text-gray-700 mt-2">Um olhar profundo sobre os mistérios do universo e como a física moderna explica fenômenos cósmicos.</p>
+      </div>
+
+      <!-- Fase da Lua -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <p class="font-semibold mb-2">Fase da Lua</p>
+        <img src="https://www.timeanddate.com/scripts/moon.php" alt="Fase da Lua" class="h-16" loading="lazy">
+      </div>
+
+      <!-- APOD NASA -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <p class="font-semibold mb-2">Imagem do Dia - NASA</p>
+        <img src="https://apod.nasa.gov/apod/image/2508/MilkyWay_Saturn_Jupiter.jpg" alt="APOD NASA" class="h-16 object-cover rounded" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão de Categorias -->
+  <nav class="bg-gray-100 border-b text-sm font-medium shadow-sm">
+    <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
+      <a href="#" class="hover:text-yellow-500">Economia</a>
+      <a href="#" class="hover:text-yellow-500">Esporte</a>
+      <a href="#" class="hover:text-yellow-500">TV</a>
+      <a href="#" class="hover:text-yellow-500">Ciência</a>
+      <a href="#" class="hover:text-yellow-500">Tecnologia</a>
+      <a href="#" class="hover:text-yellow-500">Educação</a>
+      <a href="#" class="hover:text-yellow-500">Política</a>
+    </div>
+  </nav>
+
+  <!-- Conteúdo Principal (do código atual) -->
   <main class="container mx-auto px-4 py-8">
     <!-- Notícia de destaque -->
     <div class="bg-white rounded-lg shadow-md p-4 mb-8">
@@ -69,19 +105,16 @@
         <h3 class="font-bold">Notícia 1</h3>
         <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
       </div>
-
       <div class="bg-white rounded-lg shadow-md p-3">
         <img src="https://placehold.co/300x200" alt="Imagem ilustrativa da notícia 2" class="rounded mb-2 w-full object-cover" loading="lazy">
         <h3 class="font-bold">Notícia 2</h3>
         <p class="text-sm text-gray-600">Resumo breve da notícia 2.</p>
       </div>
-
       <div class="bg-white rounded-lg shadow-md p-3">
         <img src="https://placehold.co/300x200" alt="Imagem ilustrativa da notícia 3" class="rounded mb-2 w-full object-cover" loading="lazy">
         <h3 class="font-bold">Notícia 3</h3>
         <p class="text-sm text-gray-600">Resumo breve da notícia 3.</p>
       </div>
-
       <div class="bg-white rounded-lg shadow-md p-3">
         <img src="https://placehold.co/300x200" alt="Imagem ilustrativa da notícia 4" class="rounded mb-2 w-full object-cover" loading="lazy">
         <h3 class="font-bold">Notícia 4</h3>
@@ -97,13 +130,45 @@
     <button class="bg-yellow-400 text-black px-4 py-2 rounded ml-2 hover:bg-yellow-500 transition">Inscrever-se</button>
   </section>
 
-  <!-- Rodapé -->
-  <footer class="bg-black text-white text-center py-6 mt-8">
-    <p>&copy; 2025 Olho de Rapina. Todos os direitos reservados.</p>
-    <div class="flex justify-center space-x-4 mt-3">
-      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  <!-- Rodapé clássico (do código antigo) -->
+  <footer class="bg-black text-white mt-8">
+    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+      <div>
+        <h4 class="font-bold mb-3 text-yellow-500">Institucional</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-yellow-400">Sobre Nós</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Anuncie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-3 text-yellow-500">Categorias</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Tecnologia</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Educação</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-3 text-yellow-500">Redes Sociais</h4>
+        <div class="flex space-x-4 text-lg">
+          <a href="#" aria-label="YouTube" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter/X" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-3 text-yellow-500">Newsletter</h4>
+        <form class="flex flex-col space-y-2">
+          <p class="text-xs text-gray-400">Receba novidades direto no seu e-mail:</p>
+          <input type="email" placeholder="Seu e-mail" class="px-3 py-2 rounded text-black">
+          <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded">Assinar</button>
+        </form>
+      </div>
+    </div>
+    <div class="bg-gray-900 text-center py-3 text-xs">
+      © 2025 - Portal de Conteúdo. Todos os direitos reservados.
     </div>
   </footer>
 
