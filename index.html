@@ -1,83 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Olho de Rapina - Portal de ciência, filosofia e conhecimento. Notícias, artigos e conteúdos em linguagem simples e acessível.">
-  <title>Olho de Rapina</title>
-  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olho de Rapina</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa1cBlalA//uQIVurbDAZN/4zYMjWK8TRwuZgSCkPEQEAW648w/CL6+Kd/EStLgO/3w58k5A3zZtZkK3WYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Fonte Roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    />
+  </head>
+  <body class="bg-gray-100 font-sans text-black">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- FontAwesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-  <style>
-    body { font-family: 'Roboto', sans-serif; }
-    img { max-width: 100%; height: auto; } /* evita distorção no celular */
-  </style>
-</head>
-<body class="bg-gray-100 text-black">
-
-  <!-- Barra de Menu Superior (fixa) -->
-  <header class="bg-black text-white border-b border-gray-700 fixed top-0 left-0 w-full z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3 text-sm font-medium">
-      <!-- Menu Esquerda -->
-      <nav class="flex space-x-6">
-        <a href="#" class="hover:text-yellow-400">Home</a>
-        <a href="#" class="hover:text-yellow-400">Astronomia</a>
-        <a href="#" class="hover:text-yellow-400">Filosofia</a>
-        <a href="#" class="hover:text-yellow-400">Sobre</a>
-      </nav>
-      <!-- Ícones Direita -->
-      <div class="flex space-x-4 text-lg">
-        <a href="#" aria-label="YouTube" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
-        <a href="#" aria-label="Facebook" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
-        <a href="#" aria-label="Instagram" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter/X" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
+    <!-- Barra de Menu -->
+    <nav class="bg-black py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex">
+          <ul class="flex space-x-6 text-white hover:text-yellow-400 cursor-pointer">
+            <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Páginas</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Novidades</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Sobre</a></li>
+          </ul>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-white hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="text-white hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
+        </div>
       </div>
-    </div>
-  </header>
+    </nav>
 
-  <!-- Espaço para compensar header fixo -->
-  <div class="h-14"></div>
+    <!-- Cabeçalho -->
+    <header class="bg-yellow-400 py-8">
+      <div class="container mx-auto flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+        <!-- Logo -->
+        <div>
+          <div class="md:w-1/4 text-center"></div>
+          <img src="logo.png" alt="Logo" class="mx-auto h-28 w-auto" />
+          <h1 class="text-3xl text-black mt-6">OLHO DE RAPINA</h1>
+        </div>
+        <!-- Fim logo -->
+        <!-- Início do destaque -->
+        <div class="md:w-1/4">
+          <h2 class="text-2xl text-black">Destaque</h2>
+          <p class="text-black text-sm">Breve descrição do destaque. Pode incluir uma imagem aqui.</p>
+          <img src="https://aeroin.net/wp-content/uploads/2020/06/Blue_Main_500px.png" alt="Destaque Imagem" class="mt-4 rounded" />
+        </div>
+        <!-- Fim do destaque -->
+        <!-- Início do script da fase da lua -->
+        <div class="md:w-1/4 text-center">
+          <!--
+          <h2 class="text-2xl text-black">Fase da Lua</h2>
+          <img src="https://www.timeanddate.com/scripts/moon.php" alt="Fase da Lua" class="mt-4 mx-auto" />
+          <p class="text-black text-sm">Nova</p>
+          --> 
+          <!-- <Fase class="text-2xl text-black">Fase da Lua</h2> -->
+        <div id="moon-phase">
+          <p>Carregando...</p>
+        </div>
 
-  <!-- Cabeçalho Principal (com fundo amarelo) -->
-  <section class="w-full bg-[#fdf489] shadow-md">
-    <div class="max-w-7xl mx-auto grid grid-cols-5 gap-6 px-6 py-6 border-b">
-      <!-- Logo -->
-      <div class="flex flex-col items-center justify-center text-center">
-        <img src="logo.png" alt="Logo do Site" class="h-20 w-auto" loading="lazy">
-        <h1 class="mt-2 text-2xl font-bold text-black hover:text-yellow-600 transition-colors">
-          Olho de Rapina
-        </h1>
+        <script>
+          // Função principal
+          async function loadMoonPhase() {
+            try {
+              // URL do arquivo XML (ajuste conforme necessário)
+              const response = await fetch("fasesLua/phases.xml");
+              if (!response.ok) throw new Error("Erro ao carregar o arquivo XML.");
+
+              const xmlText = await response.text();
+              const parser = new DOMParser();
+              const xml = parser.parseFromString(xmlText, "application/xml");
+
+              // Verifica por erros no XML
+              const parseError = xml.querySelector("parsererror");
+              if (parseError)
+                throw new Error("Erro no XML: " + parseError.textContent);
+
+              // Lê as fases da lua
+              const phases = Array.from(xml.querySelectorAll("phase"));
+              const phaseList = [];
+
+              phases.forEach((phase) => {
+                const phaseName = phase.getAttribute("name");
+                const dates = phase.querySelectorAll("date");
+
+                dates.forEach((dateNode) => {
+                  const dateText = dateNode.textContent.trim();
+
+                  // Substitui o espaço entre data e hora por "T" para ISO 8601
+                  const formattedDate = dateText.replace(" ", "T");
+                  const date = new Date(formattedDate);
+
+                  // Verifica se a data é válida
+                  if (!isNaN(date)) {
+                    phaseList.push({ name: phaseName, date });
+                  } else {
+                    console.error("Data inválida encontrada:", dateText);
+                  }
+                });
+              });
+
+              // Ordena a lista de fases por data
+              phaseList.sort((a, b) => a.date - b.date);
+
+              console.log("Lista de fases ordenada:", phaseList);
+
+              // Determina a fase atual
+              const now = new Date();
+              console.log("Data atual:", now);
+
+              let currentPhase = null;
+
+              for (let i = 0; i < phaseList.length - 1; i++) {
+                const current = phaseList[i];
+                const next = phaseList[i + 1];
+
+                if (now >= current.date && now < next.date) {
+                  currentPhase = current;
+                  break;
+                }
+              }
+
+              if (!currentPhase) {
+                // Caso especial: última fase do ciclo
+                const lastPhase = phaseList[phaseList.length - 1];
+                if (now >= lastPhase.date) {
+                  currentPhase = lastPhase;
+                }
+              }
+
+              // Atualiza a página
+              const phaseElement = document.getElementById("moon-phase");
+              if (currentPhase) {
+                const phaseImage =
+                  currentPhase.name.replace(" ", "").toLowerCase() + ".png";
+              phaseElement.innerHTML = `
+                  <p>${currentPhase.name}</p>
+                  <img src="fasesLua/${phaseImage}" alt="${currentPhase.name}" class="mx-auto block mt-2" />
+              `;
+              } else {
+                phaseElement.innerHTML = `<p>Não foi possível determinar a fase da Lua.</p>`;
+              }
+            } catch (error) {
+              console.error("Erro ao determinar a fase da Lua:", error);
+              document.getElementById(
+                "moon-phase"
+              ).innerHTML = `<p>Erro ao carregar as informações da Lua.</p>`;
+            }
+          }
+
+          // Executa a função ao carregar a página
+          loadMoonPhase();
+        </script>
+            <!-- Fim do script da fase da lua -->
+        </div>
+        <div class="md:w-1/4 text-center">
+          <h2 class="text-2xl text-black">APOD da NASA</h2>
+          <img src="https://apod.nasa.gov/apod/image/230428.jpg" alt="APOD" class="mt-4 rounded mx-auto" />
+        </div>
       </div>
-
-      <!-- Matéria em destaque no header -->
-      <div class="col-span-2 flex flex-col justify-center">
-        <h2 class="text-xl font-bold leading-snug">Matéria em Destaque: Buracos Negros e a Relatividade</h2>
-        <p class="text-sm text-gray-700 mt-2">Um olhar profundo sobre os mistérios do universo e como a física moderna explica fenômenos cósmicos.</p>
-      </div>
-
-      <!-- Fase da Lua -->
-      <div class="flex flex-col items-center justify-center text-center">
-        <p class="font-semibold mb-2">Fase da Lua</p>
-        <img src="https://www.timeanddate.com/scripts/moon.php" alt="Fase da Lua" class="h-16" loading="lazy">
-      </div>
-
-      <!-- APOD NASA -->
-      <div class="flex flex-col items-center justify-center text-center">
-        <p class="font-semibold mb-2">Imagem do Dia - NASA</p>
-        <img src="https://apod.nasa.gov/apod/image/2508/MilkyWay_Saturn_Jupiter.jpg" alt="APOD NASA" class="h-16 object-cover rounded" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- Sessão de Categorias -->
+    </header>
+      <!-- Sessão de Categorias -->
   <nav class="bg-gray-100 border-b text-sm font-medium shadow-sm">
     <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
       <a href="#" class="hover:text-yellow-500">Economia</a>
@@ -90,107 +180,137 @@
     </div>
   </nav>
 
-  <!-- Conteúdo Principal -->
-  <main class="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-3 gap-6">
-    
-    <!-- Coluna Central (destaques + grid) -->
-    <section class="lg:col-span-2 space-y-6">
-      <!-- Notícia de destaque -->
-      <div class="bg-white rounded-lg shadow-md p-4">
-        <img src="https://i.imgur.com/XgVG5yU.png" class="rounded-lg mb-3 w-full object-cover" loading="lazy">
-        <h2 class="text-xl font-bold mb-2">Título da Notícia em Destaque</h2>
-        <p class="text-gray-700">Descrição breve da notícia de destaque. Um resumo introdutório para atrair o leitor a continuar a leitura.</p>
-      </div>
-
-      <!-- Grid de notícias -->
-      <div class="grid md:grid-cols-2 gap-4">
-        <div class="bg-white rounded-lg shadow-md p-3">
-          <img src="https://placehold.co/300x200" alt="Imagem notícia 1" class="rounded mb-2 w-full object-cover" loading="lazy">
-          <h3 class="font-bold">Notícia 1</h3>
-          <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
+    <!-- Corpo -->
+    <main class="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-3 gap-6">
+      
+      <!-- Coluna principal -->
+      <section class="lg:col-span-2 space-y-6">
+        <!-- Notícia em destaque -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <img src="https://i.postimg.cc/BQqCwG5r/s00004-2289951354.png" alt="Matéria Principal" class="rounded-lg mb-3 w-full object-cover" />
+          <a href="SUA_URL" class="hover:text-yellow-500 text-2xl font-bold mb-2">O Canal Sumiu! Como os Golpes de Hacking Estão Devastando o YouTube e Como se Proteger</a>
+          <p class="text-gray-700 text-sm">
+            Muitos criadores de conteúdo do YouTube, desde pequenos canais até grandes influenciadores,
+            têm sido alvo de ataques de hackers. Esses golpes geralmente começam com e-mails de phishing
+            disfarçados de propostas de colaboração, patrocínios ou até mesmo avisos do próprio YouTube...
+          </p>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-3">
-          <img src="https://placehold.co/300x200" alt="Imagem notícia 2" class="rounded mb-2 w-full object-cover" loading="lazy">
-          <h3 class="font-bold">Notícia 2</h3>
-          <p class="text-sm text-gray-600">Resumo breve da notícia 2.</p>
+
+        <!-- Grid de destaques -->
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-lg shadow-md p-3">
+
+              <div class="relative w-full" style="aspect-ratio: 16/9;">
+    <iframe
+      class="absolute inset-0 w-full h-full rounded"
+      src="https://www.youtube.com/embed/IyNoZOdOx7g"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+
+            <h3 class="font-bold">Título do Destaque 1</h3>
+            <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-3">
+            <img src="https://placehold.co/300x200" class="rounded mb-2 w-full object-cover">
+            <h3 class="font-bold">Título do Destaque 2</h3>
+            <p class="text-sm text-gray-600">Resumo breve da notícia 2.</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-3">
+            <img src="https://placehold.co/300x200" class="rounded mb-2 w-full object-cover">
+            <h3 class="font-bold">Título do Destaque 3</h3>
+            <p class="text-sm text-gray-600">Resumo breve da notícia 3.</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-3">
+            <img src="https://placehold.co/300x200" class="rounded mb-2 w-full object-cover">
+            <h3 class="font-bold">Título do Destaque 4</h3>
+            <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
+          </div>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-3">
-          <img src="https://placehold.co/300x200" alt="Imagem notícia 3" class="rounded mb-2 w-full object-cover" loading="lazy">
-          <h3 class="font-bold">Notícia 3</h3>
-          <p class="text-sm text-gray-600">Resumo breve da notícia 3.</p>
+      </section>
+
+      <!-- Coluna lateral -->
+      <aside class="space-y-6">
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <h3 class="font-bold mb-3 border-b pb-2">Mais Lidas</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-yellow-500">Matéria popular 1</a></li>
+            <li><a href="#" class="hover:text-yellow-500">Matéria popular 2</a></li>
+            <li><a href="#" class="hover:text-yellow-500">Matéria popular 3</a></li>
+            <li><a href="#" class="hover:text-yellow-500">Matéria popular 4</a></li>
+          </ul>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-3">
-          <img src="https://placehold.co/300x200" alt="Imagem notícia 4" class="rounded mb-2 w-full object-cover" loading="lazy">
-          <h3 class="font-bold">Notícia 4</h3>
-          <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
+
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <h3 class="font-bold mb-3 border-b pb-2">Newsletter</h3>
+          <input type="email" placeholder="Digite seu e-mail" class="border p-2 rounded w-full mb-2">
+          <button class="bg-yellow-400 text-black px-4 py-2 rounded w-full hover:bg-yellow-500 transition">Inscrever-se</button>
+        </div>
+                      <!-- Grid de parocinado -->
+                  <div class="bg-white rounded-lg shadow-md p-3">
+                    <h4 class="font-bold text-yellow-500 mb-2">Patrocinado</h4>
+            <img src="https://placehold.co/300x200" class="rounded mb-2 w-full object-cover">
+            <h3 class="font-bold">Título do Destaque 4</h3>
+            <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
+                  </div>
+        <div class="grid md:grid-cols-1 gap-4">
+          <div class="bg-white rounded-lg shadow-md p-3">
+            <h4 class="font-bold text-yellow-500 mb-2">Patrocinado</h4>
+            <img src="https://placehold.co/200x300" class="rounded mb-2 w-full object-cover">
+            <h3 class="font-bold">Título do Destaque 1</h3>
+            <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
+          </div>
+
+      </aside>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-black text-white mt-8">
+      <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Institucional</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-400">Sobre Nós</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Anuncie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Categorias</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Tecnologia</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Educação</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Redes Sociais</h4>
+          <div class="flex space-x-4 text-lg">
+            <a href="#" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Newsletter</h4>
+          <form class="flex flex-col space-y-2">
+            <p class="text-xs text-gray-400">Receba novidades direto no seu e-mail:</p>
+            <input type="email" placeholder="Seu e-mail" class="px-3 py-2 rounded text-black">
+            <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded">Assinar</button>
+          </form>
         </div>
       </div>
-    </section>
-
-    <!-- Coluna Lateral (mais lidas, widgets) -->
-    <aside class="space-y-6">
-      <div class="bg-white rounded-lg shadow-md p-4">
-        <h3 class="font-bold mb-3 border-b pb-2">Mais Lidas</h3>
-        <ul class="space-y-3 text-sm">
-          <li><a href="#" class="hover:text-yellow-500">Matéria popular 1 sobre ciência</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Matéria popular 2 sobre filosofia</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Matéria popular 3 sobre espaço</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Matéria popular 4 sobre educação</a></li>
-        </ul>
+      <div class="bg-gray-900 text-center py-3 text-xs">
+        © 2025 - Olho de Rapina. Todos os direitos reservados.
       </div>
+    </footer>
 
-      <div class="bg-white rounded-lg shadow-md p-4">
-        <h3 class="font-bold mb-3 border-b pb-2">Newsletter</h3>
-        <input type="email" placeholder="Digite seu e-mail" class="border p-2 rounded w-full mb-2">
-        <button class="bg-yellow-400 text-black px-4 py-2 rounded w-full hover:bg-yellow-500 transition">Inscrever-se</button>
-      </div>
-    </aside>
-
-  </main>
-
-  <!-- Rodapé clássico -->
-  <footer class="bg-black text-white mt-8">
-    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
-      <div>
-        <h4 class="font-bold mb-3 text-yellow-500">Institucional</h4>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-yellow-400">Sobre Nós</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Anuncie</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3 text-yellow-500">Categorias</h4>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Tecnologia</a></li>
-          <li><a href="#" class="hover:text-yellow-400">Educação</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3 text-yellow-500">Redes Sociais</h4>
-        <div class="flex space-x-4 text-lg">
-          <a href="#" aria-label="YouTube" class="hover:text-yellow-400"><i class="fab fa-youtube"></i></a>
-          <a href="#" aria-label="Facebook" class="hover:text-yellow-400"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="Instagram" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Twitter/X" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
-        </div>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3 text-yellow-500">Newsletter</h4>
-        <form class="flex flex-col space-y-2">
-          <p class="text-xs text-gray-400">Receba novidades direto no seu e-mail:</p>
-          <input type="email" placeholder="Seu e-mail" class="px-3 py-2 rounded text-black">
-          <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded">Assinar</button>
-        </form>
-      </div>
-    </div>
-    <div class="bg-gray-900 text-center py-3 text-xs">
-      © 2025 - Portal de Conteúdo. Todos os direitos reservados.
-    </div>
-  </footer>
-
-</body
-
+  </body>
+</html>
 
 
