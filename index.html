@@ -414,6 +414,94 @@
               <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
             </div>
           </div>
+          <!-- início de nova sessão imagem do dia -->
+          <!-- Linha divisória vermelha -->
+          <div class="border-b-2 border-yellow-500 my-6"></div>
+          <div class="bg-white rounded-lg border-2 border-500 p-4">
+            <h3 class="font-bold">IMAGEM DO DIA</h3>
+            <div class="bg-gray-100 grid md:grid-cols-2 gap-4">
+              <img
+                class="w-4 h-4 m-2 fa fa-chevron-circle-left hover:text-yellow-500"
+                id="anterior"
+                alt="Anterior"
+              />
+              <img
+                class="w-4 h-4 m-2 fa fa-chevron-circle-right hover:text-yellow-500"
+                id="proxima"
+                alt="Anterior"
+              />
+            </div>
+            <a id="linkImagem" href="javascript:void(0);">
+              <img id="imagem" alt="Imagem rotativa" />
+            </a>
+
+            <script>
+              const totalImagens = 365; // Total de imagens
+              const diasPorImagem = 1; // Dias entre mudanças
+              const dataBase = new Date("2025-08-30"); // Data base inicial
+
+              let indiceAtual = calcularIndiceAtual(); // Índice atual da imagem
+
+              // Função para calcular o índice com base na data
+              function calcularIndiceAtual() {
+                const hoje = new Date();
+                const diferencaDias = Math.floor(
+                  (hoje - dataBase) / (1000 * 60 * 60 * 24)
+                );
+                return (
+                  (Math.floor(diferencaDias / diasPorImagem) % totalImagens) + 1
+                );
+              }
+
+              // Função para exibir a imagem
+              function exibirImagem(indice) {
+                const caminhoImagem = `imgs/foto${String(indice).padStart(
+                  3,
+                  "0"
+                )}.jpg`;
+                document.getElementById("imagem").src = caminhoImagem;
+              }
+
+              // Exibe a imagem inicial
+              exibirImagem(indiceAtual);
+
+              // Função para mudar a imagem
+              function mudarImagem(delta) {
+                indiceAtual += delta;
+                if (indiceAtual < 1) {
+                  indiceAtual = totalImagens; // Volta para a última imagem
+                } else if (indiceAtual > totalImagens) {
+                  indiceAtual = 1; // Volta para a primeira imagem
+                }
+                exibirImagem(indiceAtual);
+              }
+
+              // Event Listeners para os ícones
+              document
+                .getElementById("anterior")
+                .addEventListener("click", () => mudarImagem(-1));
+              document
+                .getElementById("proxima")
+                .addEventListener("click", () => mudarImagem(1));
+
+              // Exibe o modal na página mãe
+              document
+                .getElementById("imagem")
+                .addEventListener("click", () => {
+                  const caminhoImagem = document.getElementById("imagem").src;
+
+                  // Envia o comando para a página mãe criar o modal
+                  window.parent.postMessage(
+                    {
+                      type: "showModal",
+                      imageUrl: caminhoImagem,
+                    },
+                    "*"
+                  );
+                });
+            </script>
+          </div>
+          <!-- fim imagem do dia -->
         </section>
 
         <!-- Coluna lateral -->
@@ -486,6 +574,27 @@
               <h3 class="font-bold">Título do Destaque 1</h3>
               <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
             </div>
+          </div>
+          <div
+            class="bg-yellow-100 rounded-lg p-4 flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 ..."
+          >
+            <img
+              class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
+              src="/img/ste.png"
+              alt=""
+            />
+            <div class="space-y-2 text-center sm:text-left">
+              <div class="space-y-0.5">
+                <p class="text-lg font-semibold text-black">Rapina</p>
+                <p class="font-medium text-gray-500">Product Engineer</p>
+              </div>
+              <button
+                class="border-yellow-500 text-black-500 hover:border-transparent hover:bg-yellow-500 hover:text-white active:bg-yellow-500 ..."
+              >
+                Message
+              </button>
+            </div>
+            <!--fim teste-->
           </div>
         </aside>
       </main>
