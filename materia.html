@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olho de Rapina</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body
+    class="bg-white text-black font-roboto transition-colors duration-300 dark:bg-black dark:text-white"
+  >
+    <!-- 🔝 TOPO -->
+    <header
+      class="w-full bg-black text-white flex justify-between items-center px-6 py-3"
+    >
+      <!-- Menu de páginas -->
+      <nav class="flex gap-6">
+        <a href="index.html" class="hover:text-yellow-400">Início</a>
+        <a href="categoria.html" class="hover:text-yellow-400">Matérias</a>
+        <a href="categoria.html" class="hover:text-yellow-400">Vídeos</a>
+        <a href="contato.html" class="hover:text-yellow-400">Contato</a>
+      </nav>
+
+      <!-- Redes sociais + busca -->
+      <div class="flex items-center gap-4">
+        <a href="https://youtube.com/@olhoderapina" target="_blank"
+          ><img src="img/icones/youtube.svg" class="w-6"
+        /></a>
+        <a href="#"><img src="img/icones/instagram.svg" class="w-6" /></a>
+        <a href="#"><img src="img/icones/facebook.svg" class="w-6" /></a>
+        <a href="#"><img src="img/icones/twitter.svg" class="w-6" /></a>
+        <button id="searchBtn">
+          <img src="img/icones/search.svg" class="w-6" />
+        </button>
+        <button
+          id="darkModeBtn"
+          class="ml-4 px-3 py-1 rounded bg-yellow-400 text-black"
+        >
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <!-- 🔻 BANNER -->
+    <section class="w-full bg-yellow-400 text-black py-6">
+      <div class="container mx-auto grid grid-cols-4 gap-6 text-center">
+        <!-- Coluna 1 -->
+        <div>
+          <img src="img/logo.png" alt="Olho de Rapina" class="mx-auto w-20" />
+          <h1 class="text-xl font-bold mt-2">OLHO DE RAPINA</h1>
+        </div>
+        <!-- Coluna 2 -->
+        <div class="bg-black text-yellow-400 p-4 rounded-lg shadow-lg">
+          <h2 class="font-bold">Destaque 1</h2>
+          <p class="text-sm">Um resumo breve e chamativo aqui.</p>
+        </div>
+        <!-- Coluna 3 -->
+        <div class="bg-black text-yellow-400 p-4 rounded-lg shadow-lg">
+          <h2 class="font-bold">Destaque 2</h2>
+          <p class="text-sm">Outro destaque em evidência.</p>
+        </div>
+        <!-- Coluna 4 - Fase da Lua -->
+        <div
+          id="faseLua"
+          class="bg-black text-yellow-400 p-4 rounded-lg shadow-lg"
+        >
+          🌙 <span>Fase da Lua</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔗 CATEGORIAS -->
+    <nav class="w-full bg-blue-600 text-white py-3">
+      <ul
+        class="container mx-auto flex justify-center gap-6 font-bold uppercase"
+      >
+        <li>
+          <a href="categoria.html" class="hover:text-yellow-400">Esporte</a>
+        </li>
+        <li>
+          <a href="categoria.html" class="hover:text-yellow-400">Economia</a>
+        </li>
+        <li><a href="categoria.html" class="hover:text-yellow-400">TV</a></li>
+        <li>
+          <a href="categoria.html" class="hover:text-yellow-400">Ciência</a>
+        </li>
+        <li>
+          <a href="categoria.html" class="hover:text-yellow-400">Educação</a>
+        </li>
+        <li>
+          <a href="categoria.html" class="hover:text-yellow-400">Política</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 📰 CONTEÚDO PRINCIPAL -->
+    <main class="container mx-auto grid grid-cols-4 gap-6 my-8">
+      <!-- Destaques principais -->
+      <section class="col-span-3 grid grid-cols-2 gap-6">
+        <article
+          class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+        >
+          <a href="materia.html">
+            <img src="img/exemplo1.jpg" alt="Notícia" class="w-full" />
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Título da Matéria</h3>
+              <p class="text-sm">Resumo breve da matéria em destaque...</p>
+            </div>
+          </a>
+        </article>
+        <article
+          class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+        >
+          <a href="materia.html">
+            <img src="img/exemplo2.jpg" alt="Notícia" class="w-full" />
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Outra Matéria</h3>
+              <p class="text-sm">Resumo breve da matéria...</p>
+            </div>
+          </a>
+        </article>
+      </section>
+
+      <!-- Barra lateral -->
+      <aside class="col-span-1 space-y-4">
+        <div class="bg-yellow-400 text-black p-4 rounded-lg">
+          <h3 class="font-bold">Destaques</h3>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#" class="hover:underline">Matéria 1</a></li>
+            <li><a href="#" class="hover:underline">Matéria 2</a></li>
+          </ul>
+        </div>
+        <div class="bg-black text-yellow-400 p-4 rounded-lg">
+          <h3 class="font-bold">Contato</h3>
+          <p>Email: contato@olhoderapina.com.br</p>
+        </div>
+      </aside>
+    </main>
+
+    <!-- 📌 RODAPÉ -->
+    <footer class="w-full bg-black text-white py-6 mt-12">
+      <div class="container mx-auto flex justify-between">
+        <p>&copy; 2025 Olho de Rapina - Todos os direitos reservados</p>
+        <p>Desenvolvido com ❤️ em Tailwind</p>
+      </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

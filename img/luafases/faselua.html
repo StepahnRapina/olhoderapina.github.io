@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fase da Lua Atual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    img {
+      width: 200px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+    h2 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fase da Lua Hoje</h1>
+  <div id="moon-phase"></div>
+
+  <script>
+    async function carregarFase() {
+      const resposta = await fetch("phases.xml");
+      const texto = await resposta.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(texto, "application/xml");
+
+      const fases = xml.getElementsByTagName("phase");
+      const hoje = new Date();
+      let faseAtual = null;
+
+      // Vamos montar uma lista ordenada com todas as datas
+      let lista = [];
+      for (let fase of fases) {
+        let nome = fase.getAttribute("name");
+        for (let data of fase.getElementsByTagName("date")) {
+          lista.push({
+            nome: nome,
+            data: new Date(data.textContent)
+          });
+        }
+      }
+
+      // Ordenar todas as datas
+      lista.sort((a, b) => a.data - b.data);
+
+      // Descobrir em qual intervalo o "hoje" se encontra
+      for (let i = 0; i < lista.length - 1; i++) {
+        if (hoje >= lista[i].data && hoje < lista[i + 1].data) {
+          faseAtual = lista[i].nome;
+          break;
+        }
+      }
+
+      // Se não achou, pega a última
+      if (!faseAtual) {
+        faseAtual = lista[lista.length - 1].nome;
+      }
+
+      // Mapear nomes para imagens
+      const imagens = {
+        "LUA NOVA": "luaNova.png",
+        "LUA CRESCENTE": "luaCrescente.png",
+        "LUA CHEIA": "luaCheia.png",
+        "LUA MINGUANTE": "luaMinguante.png"
+      };
+
+      // Exibir
+      const div = document.getElementById("moon-phase");
+      div.innerHTML = `
+        <img src="${imagens[faseAtual]}" alt="${faseAtual}">
+        <h2>${faseAtual}</h2>
+      `;
+    }
+
+    carregarFase();
+  </script>
+</body>
+</html>

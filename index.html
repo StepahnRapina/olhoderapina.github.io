@@ -3,32 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Stephan Rapina" />
     <meta
       name="description"
       content="Olho de Rapina - Portal de ciência, filosofia e conhecimento. Notícias, artigos e conteúdos em linguagem simples e acessível."
     />
     <title>Olho de Rapina</title>
-    <link
-      rel="icon"
-      href="https://www.olhoderapina.com.br/img/favicon.png"
-      type="image/x-icon"
-    />
 
-    <!-- Fonte Roboto -->
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- FontAwesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
 
+    <!-- Estilos próprios -->
+    <link rel="stylesheet" href="css/style.css" />
     <style>
       body {
         font-family: "Roboto", sans-serif;
@@ -40,22 +34,16 @@
     </style>
   </head>
   <body class="bg-gray-100 font-sans text-black">
-    <!-- Barra de Menu -->
-    <!-- Barra de Menu -->
+    <!-- ========== NAVBAR ========== -->
     <nav class="bg-black py-4">
       <div class="container mx-auto flex justify-between items-center">
-        <div class="flex">
-          <ul class="hidden md:flex space-x-6 text-white">
-            <li>
-              <a href="./index.html" class="hover:text-yellow-400">Home</a>
-            </li>
-            <li><a href="#" class="hover:text-yellow-400">Páginas</a></li>
-            <li><a href="#" class="hover:text-yellow-400">Novidades</a></li>
-            <li><a href="#" class="hover:text-yellow-400">Patrão</a></li>
-            <li><a href="#" class="hover:text-yellow-400">Sobre</a></li>
-          </ul>
-        </div>
-
+        <ul class="hidden md:flex space-x-6 text-white">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Páginas</a></li>
+          <li><a href="#">Novidades</a></li>
+          <li><a href="#">Patrão</a></li>
+          <li><a href="#">Sobre</a></li>
+        </ul>
         <div class="hidden md:flex space-x-4">
           <a href="#" class="text-white hover:text-yellow-400"
             ><i class="fab fa-youtube"></i
@@ -79,52 +67,46 @@
           <i class="fas fa-bars"></i>
         </button>
       </div>
-
-      <!-- Menu Mobile -->
       <div
         id="mobile-menu"
         class="hidden flex-col space-y-3 mt-3 px-6 md:hidden"
       >
-        <a href="./index.html" class="text-white hover:text-yellow-400">Home</a>
-        <a href="#" class="text-white hover:text-yellow-400">Páginas</a>
-        <a href="#" class="text-white hover:text-yellow-400">Novidades</a>
-        <a href="#" class="text-white hover:text-yellow-400">Sobre</a>
+        <a href="./index.html">Home</a>
+        <a href="#">Páginas</a>
+        <a href="#">Novidades</a>
+        <a href="#">Sobre</a>
       </div>
     </nav>
 
-    <!-- Cabeçalho -->
+    <!-- ========== HEADER ========== -->
     <header class="bg-yellow-400 py-8">
       <div
         class="container mx-auto flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8"
       >
         <!-- Logo -->
-        <div>
-          <div class="md:w-1/4 text-center"></div>
-          <img src="./img/logo.png" alt="Logo" class="mx-auto h-28 w-auto" />
+        <div class="md:w-1/4 text-center">
+          <img src="img/logo.png" alt="Logo" class="mx-auto h-28 w-auto" />
           <h1 class="text-3xl text-black text-center mt-6">OLHO DE RAPINA</h1>
         </div>
-        <!-- Fim logo -->
-        <!-- Início do destaque -->
+
+        <!-- Destaque -->
         <div class="md:w-1/4 text-center">
-          <h2 href="./eclipse07-09-25.html" class="text-2xl text-black">
-            DESTAQUE
-          </h2>
+          <h2 class="text-2xl text-black">DESTAQUE</h2>
           <a href="./eclipse07-09-25.html">
             <img
-              src="./image/eclip.png"
+              src="image/eclip.png"
               alt="Destaque Imagem"
               class="mt-2 rounded"
             />
           </a>
           <p class="text-black text-sm">
             7 de setembro às 15:08 (Hora de Brasília)<br />
-
             Eclipse Lunar total<br />
             <strong>Não será visível do Brasil.</strong>
           </p>
         </div>
-        <!-- Fim do destaque -->
 
+        <!-- APOD -->
         <div class="md:w-1/4 text-center">
           <h2 class="text-2xl text-black">APOD da NASA</h2>
           <img
@@ -133,111 +115,14 @@
             class="mt-4 rounded mx-auto"
           />
         </div>
-        <!-- Início do script da fase da lua -->
+
+        <!-- Fase da Lua -->
         <div class="md:w-1/4 text-center">
           <h2 class="text-2xl text-black">Fase da Lua Hoje</h2>
           <div id="moon-phase"></div>
-
-          <script>
-            async function carregarFase() {
-              const resposta = await fetch("luafases/phases.xml");
-              const texto = await resposta.text();
-              const parser = new DOMParser();
-              const xml = parser.parseFromString(texto, "application/xml");
-
-              const fases = xml.getElementsByTagName("phase");
-              const hoje = new Date();
-              hoje.setHours(0, 0, 0, 0); // zera hora pra evitar bug de comparação
-              let faseAtual = null;
-              let inicio = null;
-              let fim = null;
-              let proximaFase = null;
-              let proximaData = null;
-
-              // Função para parse de data sem UTC
-              function parseDataLocal(str) {
-                const [ano, mes, dia] = str.split("-").map(Number);
-                return new Date(ano, mes - 1, dia); // força ano/mês/dia local
-              }
-
-              // Lista com todas as datas das fases
-              let lista = [];
-              for (let fase of fases) {
-                let nome = fase.getAttribute("name");
-                for (let data of fase.getElementsByTagName("date")) {
-                  lista.push({
-                    nome: nome,
-                    data: parseDataLocal(data.textContent),
-                  });
-                }
-              }
-
-              // Ordenar todas as datas
-              lista.sort((a, b) => a.data - b.data);
-
-              // Procurar intervalo da fase atual
-              for (let i = 0; i < lista.length - 1; i++) {
-                if (hoje >= lista[i].data && hoje < lista[i + 1].data) {
-                  faseAtual = lista[i].nome;
-                  inicio = lista[i].data; // exatamente como no XML
-                  fim = new Date(lista[i + 1].data);
-                  fim.setDate(fim.getDate() - 1); // um dia antes da próxima fase
-                  proximaFase = lista[i + 1].nome;
-                  proximaData = lista[i + 1].data;
-                  break;
-                }
-              }
-
-              // Se não encontrou (após a última data do XML), pega a última
-              if (!faseAtual) {
-                faseAtual = lista[lista.length - 1].nome;
-                inicio = lista[lista.length - 1].data;
-                fim = null;
-                proximaFase = null;
-                proximaData = null;
-              }
-
-              // Mapear nomes para imagens
-              const imagens = {
-                "LUA NOVA":
-                  "http://www.olhoderapina.com.br/luafases/luaNova.png",
-                "LUA CRESCENTE":
-                  "http://www.olhoderapina.com.br/luafases/luaCrescente.png",
-                "LUA CHEIA":
-                  "http://www.olhoderapina.com.br/luafases/luaCheia.png",
-                "LUA MINGUANTE":
-                  "http://www.olhoderapina.com.br/luafases/luaMinguante.png",
-              };
-
-              // Função para formatar datas
-              function formatarData(d) {
-                if (!d) return "";
-                return d.toLocaleDateString("pt-BR", {
-                  day: "2-digit",
-                  month: "2-digit",
-                  year: "numeric",
-                });
-              }
-
-              // Exibir
-              const div = document.getElementById("moon-phase");
-              div.innerHTML = `
-      <img src="${
-        imagens[faseAtual]
-      }" alt="${faseAtual}" class="mx-auto block w-32 h-auto">
-      <p class="text-black text-sm">De ${formatarData(inicio)} até ${
-                fim ? formatarData(fim) : "..."
-              }</p>
-    `;
-            }
-
-            carregarFase();
-          </script>
         </div>
-        <!-- Fim do script da fase da lua -->
       </div>
     </header>
-    <!-- Sessão de Categorias -->
     <nav class="bg-gray-100 border-b text-sm font-medium shadow-sm">
       <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
         <a href="#" class="hover:text-yellow-500">Economia</a>
@@ -248,49 +133,7 @@
         <a href="#" class="hover:text-yellow-500">Educação</a>
         <a href="#" class="hover:text-yellow-500">Política</a>
       </div>
-      <!-- Gadget de Cotações -->
-      <!--<div
-        id="cotacoes"
-        class="flex space-x-4 bg-white p-2 rounded shadow text-sm justify-center"
-      >
-        <div>
-          <span class="font-semibold">USD/BRL:</span>
-          <span id="usd-brl">...</span>
-        </div>
-        <div>
-          <span class="font-semibold">EUR/BRL:</span>
-          <span id="eur-brl">...</span>
-        </div>
-      </div>
-
-      <script>
-        async function atualizarCotacoes() {
-          try {
-            const resposta = await fetch(
-              "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL"
-            );
-            if (!resposta.ok) throw new Error("Falha ao buscar dados");
-            const dados = await resposta.json();
-
-            const usd = parseFloat(dados.USDBRL.bid).toFixed(4);
-            const eur = parseFloat(dados.EURBRL.bid).toFixed(4);
-
-            document.getElementById("usd-brl").textContent = `R$ ${usd}`;
-            document.getElementById("eur-brl").textContent = `R$ ${eur}`;
-          } catch (erro) {
-            console.error("Erro ao atualizar cotações:", erro);
-          }
-        }
-
-        // Atualiza ao carregar a página
-        atualizarCotacoes();
-
-        // Atualiza a cada 5 minutos (300.000 ms)
-        setInterval(atualizarCotacoes, 300000);
-      </script>-->
     </nav>
-
-    <!-- Corpo -->
     <!-- Esta div garante que o fundo seja branco em toda a largura da página para a seção principal -->
     <div class="bg-white">
       <main class="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-3 gap-6">
@@ -424,7 +267,6 @@
               <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
             </div>
           </div>
-          <!-- início de nova sessão imagem do dia -->
           <!-- Linha divisória vermelha -->
           <!--<div class="border-b-2 border-yellow-200 my-6"></div>-->
           <div class="shadow-lg bg-yellow-100 rounded-lg p-4">
@@ -444,77 +286,10 @@
             <a id="linkImagem" href="javascript:void(0);">
               <img id="imagem" alt="Imagem rotativa" />
             </a>
-
-            <script>
-              const totalImagens = 100; // Total de imagens
-              const diasPorImagem = 1; // Dias entre mudanças
-              const dataBase = new Date("2025-08-18"); // Data base inicial
-
-              let indiceAtual = calcularIndiceAtual(); // Índice atual da imagem
-
-              // Função para calcular o índice com base na data
-              function calcularIndiceAtual() {
-                const hoje = new Date();
-                const diferencaDias = Math.floor(
-                  (hoje - dataBase) / (1000 * 60 * 60 * 24)
-                );
-                return (
-                  (Math.floor(diferencaDias / diasPorImagem) % totalImagens) + 1
-                );
-              }
-
-              // Função para exibir a imagem
-              function exibirImagem(indice) {
-                const caminhoImagem = `imgs/foto${String(indice).padStart(
-                  3,
-                  "0"
-                )}.jpg`;
-                document.getElementById("imagem").src = caminhoImagem;
-              }
-
-              // Exibe a imagem inicial
-              exibirImagem(indiceAtual);
-
-              // Função para mudar a imagem
-              function mudarImagem(delta) {
-                indiceAtual += delta;
-                if (indiceAtual < 1) {
-                  indiceAtual = totalImagens; // Volta para a última imagem
-                } else if (indiceAtual > totalImagens) {
-                  indiceAtual = 1; // Volta para a primeira imagem
-                }
-                exibirImagem(indiceAtual);
-              }
-
-              // Event Listeners para os ícones
-              document
-                .getElementById("anterior")
-                .addEventListener("click", () => mudarImagem(-1));
-              document
-                .getElementById("proxima")
-                .addEventListener("click", () => mudarImagem(1));
-
-              // Exibe o modal na página mãe
-              document
-                .getElementById("imagem")
-                .addEventListener("click", () => {
-                  const caminhoImagem = document.getElementById("imagem").src;
-
-                  // Envia o comando para a página mãe criar o modal
-                  window.parent.postMessage(
-                    {
-                      type: "showModal",
-                      imageUrl: caminhoImagem,
-                    },
-                    "*"
-                  );
-                });
-            </script>
+            <!-- Coluna lateral -->
           </div>
-          <!-- fim imagem do dia -->
         </section>
-
-        <!-- Coluna lateral -->
+        </section>
         <aside class="space-y-6">
           <div>
             <h3 class="grid md:grid-cols-2 gap-4 font-bold mb-3 border-b pb-2">
@@ -613,71 +388,11 @@
       </main>
     </div>
 
-    <script defer>
-      document.addEventListener("DOMContentLoaded", () => {
-        const carouselImage = document.getElementById("carousel-image");
-        const carouselTitle = document.getElementById("carousel-title");
-        const carouselDescription = document.getElementById(
-          "carousel-description"
-        );
 
-        if (carouselImage && carouselTitle && carouselDescription) {
-          const carouselItems = [
-            {
-              src: "carrossel/001.jpg",
-              title: "Título 1",
-              description: "Resumo breve da notícia 1.",
-            },
-            {
-              src: "carrossel/002.jpg",
-              title: "Título 2",
-              description: "Resumo breve da notícia 2.",
-            },
-            {
-              src: "carrossel/003.jpg",
-              title: "Título 3",
-              description: "Resumo breve da notícia 3.",
-            },
-            {
-              src: "carrossel/004.jpg",
-              title: "Título 4",
-              description: "Resumo breve da notícia 4.",
-            },
-            {
-              src: "carrossel/005.jpg",
-              title: "Título 5",
-              description: "Resumo breve da notícia 5.",
-            },
-          ];
-          let currentIndex = 0;
+ <!-- seu grid de matérias, vídeos e colunas vai aqui exatamente como está -->
+    </main>
 
-          function updateCarouselContent() {
-            const currentItem = carouselItems[currentIndex];
-            carouselImage.src = currentItem.src;
-            carouselImage.alt = `Imagem do Carrossel ${currentIndex + 1}`;
-            carouselTitle.textContent = currentItem.title;
-            carouselDescription.textContent = currentItem.description;
-          }
-
-          function changeImage() {
-            currentIndex = (currentIndex + 1) % carouselItems.length;
-            updateCarouselContent();
-          }
-
-          // Define o conteúdo inicial
-          updateCarouselContent();
-
-          // Muda a imagem e o conteúdo a cada 3 segundos (3000 milissegundos)
-          setInterval(changeImage, 5000);
-        } else {
-          console.warn(
-            "Um ou mais elementos do carrossel (imagem, título, descrição) não foram encontrados para inicializar."
-          );
-        }
-      });
-    </script>
-
-    <!-- Rodapé -->
+    <!-- ========== FOOTER ========== -->
     <footer class="bg-black text-white mt-8">
       <div
         class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm"
@@ -739,10 +454,11 @@
         © 2025 - Olho de Rapina. Todos os direitos reservados.
       </div>
     </footer>
-    <script>
-      document.getElementById("menu-btn").addEventListener("click", () => {
-        document.getElementById("mobile-menu").classList.toggle("hidden");
-      });
-    </script>
+
+    <!-- Scripts externos -->
+    <script src="js/menu.js" defer></script>
+    <script src="js/moon.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/imagemDoDia.js" defer></script>
   </body>
 </html>

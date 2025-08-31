@@ -1,0 +1,17 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Links: azul por padrão, amarelo no hover */
+a {
+  color: #2563eb; /* azul */
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #facc15; /* amarelo */
+}
