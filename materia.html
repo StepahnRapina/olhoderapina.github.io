@@ -3,153 +3,460 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Stephan Rapina" />
+    <meta
+      name="description"
+      content="Olho de Rapina - Portal de ciência, filosofia e conhecimento. Notícias, artigos e conteúdos em linguagem simples e acessível."
+    />
     <title>Olho de Rapina</title>
+
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos próprios -->
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      } /* evita distorção no celular */
+    </style>
+      <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olho de Rapina</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Titulo aqui" />
+  <meta property="og:description" content="Descrição aqui"/>
+  <meta property="og:image" content="Link Imagem" />
+  <meta property="og:url" content="https://www.olhoderapina.com.br/endereçoPaginaaqui.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Para Twitter (opcional, mas recomendado) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fascínio celeste: o eclipse total da Lua em 7 de setembro de 2025"/>
+  <meta name="twitter:description" content="Descrição aqui"/>
+  <meta name="twitter:image" content="Imagem aqui" />
   </head>
-  <body
-    class="bg-white text-black font-roboto transition-colors duration-300 dark:bg-black dark:text-white"
-  >
-    <!-- 🔝 TOPO -->
-    <header
-      class="w-full bg-black text-white flex justify-between items-center px-6 py-3"
-    >
-      <!-- Menu de páginas -->
-      <nav class="flex gap-6">
-        <a href="index.html" class="hover:text-yellow-400">Início</a>
-        <a href="categoria.html" class="hover:text-yellow-400">Matérias</a>
-        <a href="categoria.html" class="hover:text-yellow-400">Vídeos</a>
-        <a href="contato.html" class="hover:text-yellow-400">Contato</a>
-      </nav>
+  <body class="bg-gray-100 font-sans text-black">
+    <!-- ========== NAVBAR ========== -->
+    <nav class="bg-black py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <ul class="hidden md:flex space-x-6 text-white">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Páginas</a></li>
+          <li><a href="#">Novidades</a></li>
+          <li><a href="#">Patrão</a></li>
+          <li><a href="#">Sobre</a></li>
+        </ul>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-x-twitter"></i
+          ></a>
+        </div>
 
-      <!-- Redes sociais + busca -->
-      <div class="flex items-center gap-4">
-        <a href="https://youtube.com/@olhoderapina" target="_blank"
-          ><img src="img/icones/youtube.svg" class="w-6"
-        /></a>
-        <a href="#"><img src="img/icones/instagram.svg" class="w-6" /></a>
-        <a href="#"><img src="img/icones/facebook.svg" class="w-6" /></a>
-        <a href="#"><img src="img/icones/twitter.svg" class="w-6" /></a>
-        <button id="searchBtn">
-          <img src="img/icones/search.svg" class="w-6" />
-        </button>
+        <!-- Botão hamburger (somente no celular) -->
         <button
-          id="darkModeBtn"
-          class="ml-4 px-3 py-1 rounded bg-yellow-400 text-black"
+          id="menu-btn"
+          class="md:hidden text-white text-2xl focus:outline-none"
         >
-          🌙
+          <i class="fas fa-bars"></i>
         </button>
       </div>
-    </header>
-
-    <!-- 🔻 BANNER -->
-    <section class="w-full bg-yellow-400 text-black py-6">
-      <div class="container mx-auto grid grid-cols-4 gap-6 text-center">
-        <!-- Coluna 1 -->
-        <div>
-          <img src="img/logo.png" alt="Olho de Rapina" class="mx-auto w-20" />
-          <h1 class="text-xl font-bold mt-2">OLHO DE RAPINA</h1>
-        </div>
-        <!-- Coluna 2 -->
-        <div class="bg-black text-yellow-400 p-4 rounded-lg shadow-lg">
-          <h2 class="font-bold">Destaque 1</h2>
-          <p class="text-sm">Um resumo breve e chamativo aqui.</p>
-        </div>
-        <!-- Coluna 3 -->
-        <div class="bg-black text-yellow-400 p-4 rounded-lg shadow-lg">
-          <h2 class="font-bold">Destaque 2</h2>
-          <p class="text-sm">Outro destaque em evidência.</p>
-        </div>
-        <!-- Coluna 4 - Fase da Lua -->
-        <div
-          id="faseLua"
-          class="bg-black text-yellow-400 p-4 rounded-lg shadow-lg"
-        >
-          🌙 <span>Fase da Lua</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 🔗 CATEGORIAS -->
-    <nav class="w-full bg-blue-600 text-white py-3">
-      <ul
-        class="container mx-auto flex justify-center gap-6 font-bold uppercase"
+      <div
+        id="mobile-menu"
+        class="hidden flex-col space-y-3 mt-3 px-6 md:hidden"
       >
-        <li>
-          <a href="categoria.html" class="hover:text-yellow-400">Esporte</a>
-        </li>
-        <li>
-          <a href="categoria.html" class="hover:text-yellow-400">Economia</a>
-        </li>
-        <li><a href="categoria.html" class="hover:text-yellow-400">TV</a></li>
-        <li>
-          <a href="categoria.html" class="hover:text-yellow-400">Ciência</a>
-        </li>
-        <li>
-          <a href="categoria.html" class="hover:text-yellow-400">Educação</a>
-        </li>
-        <li>
-          <a href="categoria.html" class="hover:text-yellow-400">Política</a>
-        </li>
-      </ul>
+        <a href="./index.html">Home</a>
+        <a href="#">Páginas</a>
+        <a href="#">Novidades</a>
+        <a href="#">Sobre</a>
+      </div>
     </nav>
 
-    <!-- 📰 CONTEÚDO PRINCIPAL -->
-    <main class="container mx-auto grid grid-cols-4 gap-6 my-8">
-      <!-- Destaques principais -->
-      <section class="col-span-3 grid grid-cols-2 gap-6">
-        <article
-          class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
-        >
-          <a href="materia.html">
-            <img src="img/exemplo1.jpg" alt="Notícia" class="w-full" />
-            <div class="p-4">
-              <h3 class="font-bold text-lg">Título da Matéria</h3>
-              <p class="text-sm">Resumo breve da matéria em destaque...</p>
-            </div>
-          </a>
-        </article>
-        <article
-          class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
-        >
-          <a href="materia.html">
-            <img src="img/exemplo2.jpg" alt="Notícia" class="w-full" />
-            <div class="p-4">
-              <h3 class="font-bold text-lg">Outra Matéria</h3>
-              <p class="text-sm">Resumo breve da matéria...</p>
-            </div>
-          </a>
-        </article>
-      </section>
+    <!-- ========== HEADER ========== -->
+    <header class="bg-yellow-400 py-8">
+      <div
+        class="container mx-auto flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8"
+      >
+        <!-- Logo -->
+        <div class="md:w-1/4 text-center">
+          <img src="img/logo.png" alt="Logo" class="mx-auto h-28 w-auto" />
+          <h1 class="text-3xl text-black text-center mt-6">OLHO DE RAPINA</h1>
+        </div>
 
-      <!-- Barra lateral -->
-      <aside class="col-span-1 space-y-4">
-        <div class="bg-yellow-400 text-black p-4 rounded-lg">
-          <h3 class="font-bold">Destaques</h3>
-          <ul class="mt-2 space-y-1">
-            <li><a href="#" class="hover:underline">Matéria 1</a></li>
-            <li><a href="#" class="hover:underline">Matéria 2</a></li>
-          </ul>
+        <!-- Destaque -->
+        <div class="md:w-1/4 text-center">
+          <h2 class="text-2xl text-black">DESTAQUE</h2>
+          <a href="./eclipse07-09-25.html">
+            <img
+              src="image/eclip.png"
+              alt="Destaque Imagem"
+              class="mt-2 rounded"
+            />
+          </a>
+          <p class="text-black text-sm">
+            7 de setembro às 15:08 (Hora de Brasília)<br />
+            Eclipse Lunar total<br />
+            <strong>Não será visível do Brasil.</strong>
+          </p>
         </div>
-        <div class="bg-black text-yellow-400 p-4 rounded-lg">
-          <h3 class="font-bold">Contato</h3>
-          <p>Email: contato@olhoderapina.com.br</p>
+
+        <!-- APOD -->
+        <div class="md:w-1/4 text-center">
+          <h2 class="text-2xl text-black">APOD da NASA</h2>
+          <img
+            src="https://apod.nasa.gov/apod/image/230428.jpg"
+            alt="APOD"
+            class="mt-4 rounded mx-auto"
+          />
         </div>
-      </aside>
+
+        <!-- Fase da Lua -->
+        <div class="md:w-1/4 text-center">
+          <h2 class="text-2xl text-black">Fase da Lua Hoje</h2>
+          <div id="moon-phase"></div>
+        </div>
+      </div>
+    </header>
+    <nav class="bg-gray-100 border-b text-sm font-medium shadow-sm">
+      <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
+        <a href="#" class="hover:text-yellow-500 ">Economia</a>
+        <a href="#" class="hover:text-yellow-500">Esporte</a>
+        <a href="#" class="hover:text-yellow-500">TV</a>
+        <a href="#" class="hover:text-yellow-500">Ciência</a>
+        <a href="#" class="hover:text-yellow-500">Tecnologia</a>
+        <a href="#" class="hover:text-yellow-500">Educação</a>
+        <a href="#" class="hover:text-yellow-500">Política</a>
+      </div>
+    </nav>
+    <!-- Esta div garante que o fundo seja branco em toda a largura da página para a seção principal -->
+    <div class="bg-white">
+      <main class="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-3 gap-6">
+        <!-- Coluna principal -->
+        <section class="lg:col-span-2 space-y-6">
+          <!-- Notícia em destaque -->
+          <div class="space-y-3 text-gray-700 text-sm leading-relaxed">
+            <h3 class="text-2xl font-bold mb-2">
+              TÍTULO
+            </h3>
+
+            <p class="text-gray-700 text-sm">
+              TEXTO AQUI
+             
+              <img
+              src="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2025/03/eclipse-total-da-lua-ocorre-na-madrugada-de-14-de-marco/ontimeanddate.png/@@images/e0504b2c-59e2-4bf7-9bf7-bb76099e5fa6.png"
+              alt="Matéria Principal"
+              class="rounded-lg mb-3 w-full object-cover"
+              />
+              .
+            </p>
+
+            <h4 class="font-medium">SUBTÍTULO AQUI</h4>
+            <ptext-gray-700 text-sm>
+               TEXTO AQUI
+              
+          </div>
+          <!-- Botões de compartilhamento -->
+          <div class="mt-8">
+            <h4 class="text-lg font-bold mb-3 text-gray-800">
+              Compartilhe esta matéria:
+            </h4>
+            <div class="flex space-x-4 text-2xl">
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/sharer/sharer.php?u=https://olhoderapina.com.br/eclipse-07-09-2025.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+
+              <!-- Twitter (X) -->
+              <a
+                href="https://twitter.com/intent/tweet?url=https://olhoderapina.com.br/eclipse-07-09-2025.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-x-twitter"></i>
+              </a>
+
+              <!-- WhatsApp -->
+              <a
+                href="https://api.whatsapp.com/send?text=https://olhoderapina.com.br/eclipse-07-09-2025.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/shareArticle?mini=true&url=https://olhoderapina.com.br/eclipse-07-09-2025.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="https://t.me/share/url?url=https://olhoderapina.com.br/eclipse-07-09-2025.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-telegram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Linha divisória vermelha -->
+          <div class="border-b-2 border-yellow-500 my-6"></div>
+
+          <!-- Grid de destaques -->
+          
+
+          <!-- Grid de destaques -->
+          <div class="grid md:grid-cols-4 gap-4">
+            <div>
+              <div class="relative w-full" style="aspect-ratio: 16/9">
+                <iframe
+                  class="absolute inset-0 w-full h-full rounded"
+                  src="https://www.youtube.com/embed/IyNoZOdOx7g"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  loading="lazy"
+                >
+                </iframe>
+              </div>
+              <h3 class="font-bold">Título do Destaque 4</h3>
+              <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
+            </div>
+            <div>
+              <img
+                src="https://placehold.co/300x200"
+                class="rounded mb-2 w-full object-cover"
+              />
+              <h3 class="font-bold">Título do Destaque 2</h3>
+              <p class="text-sm text-gray-600">Resumo breve da notícia 2.</p>
+            </div>
+            <div>
+              <img
+                src="https://placehold.co/300x200"
+                class="rounded mb-2 w-full object-cover"
+              />
+              <h3 class="font-bold">Título do Destaque 3</h3>
+              <p class="text-sm text-gray-600">Resumo breve da notícia 3.</p>
+            </div>
+            <div>
+              <img
+                src="https://placehold.co/300x200"
+                class="rounded mb-2 w-full object-cover"
+              />
+              <h3 class="font-bold">Título do Destaque 4</h3>
+              <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
+            </div>
+          </div>
+          <!-- Linha divisória vermelha -->
+          <!--<div class="border-b-2 border-yellow-200 my-6"></div>-->
+
+        </section>
+        </section>
+        <aside class="space-y-6">
+          <div>
+            <h3 class="grid md:grid-cols-2 gap-4 font-bold mb-3 border-b pb-2">
+              Mais Lidas
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="luafases/faselua.html" class="hover:text-yellow-500"
+                  >Matéria popular 1</a
+                >
+              </li>
+              <li>
+                <a href="luafases/faselua2.html" class="hover:text-yellow-500"
+                  >Matéria popular 2</a
+                >
+              </li>
+              <li>
+                <a href="luafases/faselua3.html" class="hover:text-yellow-500"
+                  >Matéria popular 3</a
+                >
+              </li>
+              <li>
+                <a href="luafases/faselua4.html" class="hover:text-yellow-500"
+                  >Matéria popular 4</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter com caixa branca, bordas arredondadas e borda vermelha -->
+          <div class="bg-white rounded-lg border-2 border-500 p-4">
+            <h3 class="font-bold mb-3 border-b pb-2">Newsletter</h3>
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              class="border p-2 rounded w-full mb-2"
+            />
+            <button
+              class="bg-yellow-400 text-black px-4 py-2 rounded w-full hover:bg-yellow-500 transition"
+            >
+              Inscrever-se
+            </button>
+          </div>
+          <!-- Carrossel de imagens com título "Veja também" e conteúdo dinâmico -->
+          <div>
+            <h4 class="font-bold text-yellow-500 mb-2">Veja também</h4>
+            <img
+              id="carousel-image"
+              src="carrossel/001.jpg"
+              alt="Imagem do Carrossel"
+              class="rounded mb-2 w-full object-cover"
+            />
+            <h3 id="carousel-title" class="font-bold">Título 1</h3>
+            <p id="carousel-description" class="text-sm text-gray-600">
+              Resumo breve da notícia 1.
+            </p>
+          </div>
+
+          <!-- Outra div de patrocinado que foi mantida -->
+          <div class="bg-white rounded-lg border-2 border-red-500 p-4">
+            <div>
+              <h4 class="font-bold text-yellow-500 mb-2">Patrocinado</h4>
+              <img
+                src="https://placehold.co/200x200"
+                class="rounded mb-2 w-full object-cover"
+              />
+              <h3 class="font-bold">Título do Destaque 1</h3>
+              <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
+            </div>
+          </div>
+          <!--  cartão-->
+          <div
+            class="shadow-md rounded-lg p-4 flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 ..."
+          >
+            <img
+              class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
+              src="/img/ste.png"
+              alt=""
+            />
+            <div class="space-y-2 text-center sm:text-left">
+              <div class="space-y-0.5">
+                <p class="text-lg font-semibold text-black">Rapina</p>
+                <p class="font-medium text-gray-500">
+                  Coiso coisado que coisa a coisa
+                </p>
+              </div>
+              <button
+                class="border-yellow-500 text-black-500 hover:border-transparent hover:bg-yellow-500 hover:text-white active:bg-yellow-500 ..."
+              >
+                Message
+              </button>
+            </div>
+            <!--fim cartão-->
+          </div>
+        </aside>
+      </main>
+    </div>
+
+
+ <!-- seu grid de matérias, vídeos e colunas vai aqui exatamente como está -->
     </main>
 
-    <!-- 📌 RODAPÉ -->
-    <footer class="w-full bg-black text-white py-6 mt-12">
-      <div class="container mx-auto flex justify-between">
-        <p>&copy; 2025 Olho de Rapina - Todos os direitos reservados</p>
-        <p>Desenvolvido com ❤️ em Tailwind</p>
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-black text-white mt-8">
+      <div
+        class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm"
+      >
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Institucional</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-400">Sobre Nós</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Anuncie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Categorias</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Tecnologia</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Educação</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Redes Sociais</h4>
+          <div class="flex space-x-4 text-lg">
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Newsletter</h4>
+          <form class="flex flex-col space-y-2">
+            <p class="text-xs text-gray-400">
+              Receba novidades direto no seu e-mail:
+            </p>
+            <input
+              type="email"
+              placeholder="Seu e-mail"
+              class="px-3 py-2 rounded text-black"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded"
+            >
+              Assinar
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="bg-gray-900 text-center py-3 text-xs">
+        © 2025 - Olho de Rapina. Todos os direitos reservados.
       </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <!-- Scripts externos -->
+    <script src="js/menu.js" defer></script>
+    <script src="js/moon.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/imagemDoDia.js" defer></script>
   </body>
 </html>
