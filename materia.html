@@ -31,30 +31,55 @@
         max-width: 100%;
         height: auto;
       } /* evita distorção no celular */
-    </style>
-      <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olho de Rapina</title>
+      /*neon pulsante*/
+      @keyframes neonPulse {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(59,130,246,0.7),
+                 0 0 10px rgba(59,130,246,0.5);
+    box-shadow: 0 0 20px 4px rgba(59,130,246,0.6),
+                0 0 40px 10px rgba(59,130,246,0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(59,130,246,1),
+                 0 0 30px rgba(59,130,246,0.8);
+    box-shadow: 0 0 30px 8px rgba(59,130,246,0.9),
+                0 0 60px 15px rgba(59,130,246,0.5);
+  }
+}
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Titulo aqui" />
-  <meta property="og:description" content="Descrição aqui"/>
-  <meta property="og:image" content="Link Imagem" />
-  <meta property="og:url" content="https://www.olhoderapina.com.br/endereçoPaginaaqui.html" />
+.glow-hover:hover img {
+  animation: neonPulse 1.5s infinite alternate;
+  border-radius: 1rem;
+  transform: scale(1.05);
+}
+
+.glow-hover:hover h1 {
+  animation: neonPulse 1.5s infinite alternate;
+  color: #3b82f6; /* azul Tailwind 500 */
+}
+    </style>
+
+ <!-- Open Graph -->
+  <meta property="og:title" content="Olho de Rapina" />
+  <meta property="og:description" Revista digital do canal Olho de Rapina no Youtube, nos siga aqui, no Youtube e também nas redes sociais, novidades, curiosidades, ciência e filosofia tudo em um só lugar"/>
+  <meta property="og:image" content="https://www.olhoderapina.com.br/img/logo_main.png" />
+  <meta property="og:url" content="https://www.olhoderapina.com.br" />
   <meta property="og:type" content="website" />
 
   <!-- Para Twitter (opcional, mas recomendado) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fascínio celeste: o eclipse total da Lua em 7 de setembro de 2025"/>
-  <meta name="twitter:description" content="Descrição aqui"/>
-  <meta name="twitter:image" content="Imagem aqui" />
-  </head>
+  <meta name="twitter:title" content="Olho de Rapina"/>
+  <meta name="twitter:description" content=" Revista digital do canal Olho de Rapina no Youtube, nos siga aqui, no Youtube e também nas redes sociais, novidades, curiosidades, ciência e filosofia tudo em um só lugar" />
+  <meta name="twitter:image" content="./img/logo.png" />
+
+   <!-- Fim OPEN GRAPH -->
+</head>
   <body class="bg-gray-100 font-sans text-black">
     <!-- ========== NAVBAR ========== -->
     <nav class="bg-black py-4">
       <div class="container mx-auto flex justify-between items-center">
         <ul class="hidden md:flex space-x-6 text-white">
-          <li><a href="./index.html">Home</a></li>
+          <li><a href="https://www.olhoderapina.com.br">Home</a></li>
           <li><a href="#">Páginas</a></li>
           <li><a href="#">Novidades</a></li>
           <li><a href="#">Patrão</a></li>
@@ -87,7 +112,7 @@
         id="mobile-menu"
         class="hidden flex-col space-y-3 mt-3 px-6 md:hidden"
       >
-        <a href="https://www.olhoderapina.com.br/">Home</a>
+        <a href="./index.html">Home</a>
         <a href="#">Páginas</a>
         <a href="#">Novidades</a>
         <a href="#">Sobre</a>
@@ -100,12 +125,18 @@
         class="container mx-auto flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8"
       >
         <!-- Logo -->
-        <div class="md:w-1/4 text-center">
+        <div class="md:w-1/4 text-center w-auto transition-all duration-300 transform hover:scale-105">
           <a href="https://www.olhoderapina.com.br/">
-            <img src="./img/logo.png" alt="Logo" class="mx-auto h-28 w-auto" />
+            <img 
+              src="./img/logo.png" 
+              alt="Logo" 
+              class="mx-auto h-28 w-auto transition-all duration-300 transform hover:scale-105 "
+            />
           </a>
-          <a href="https://www.olhoderapina.com.br/"> 
-            <h1 class="text-3xl text-black text-center mt-6 hover:text-indigo-700">OLHO DE RAPINA</h1>
+          <a href="https://www.olhoderapina.com.br/" >
+            <h1 class="text-3xl text-black text-center mt-6 hover:text-blue-600 transition-all duration-300">
+              OLHO DE RAPINA
+            </h1>
           </a>
         </div>
 
@@ -116,7 +147,7 @@
             <img
               src="image/eclip.png"
               alt="Destaque Imagem"
-              class="mt-2 rounded"
+              class="mx-auto h-28 w-auto transition-all duration-300 transform hover:scale-105" 
             />
           </a>
           <p class="text-black text-sm">
