@@ -31,32 +31,6 @@
         max-width: 100%;
         height: auto;
       } /* evita distorção no celular */
-      /*neon pulsante*/
-      @keyframes neonPulse {
-  0%, 100% {
-    text-shadow: 0 0 5px rgba(59,130,246,0.7),
-                 0 0 10px rgba(59,130,246,0.5);
-    box-shadow: 0 0 20px 4px rgba(59,130,246,0.6),
-                0 0 40px 10px rgba(59,130,246,0.3);
-  }
-  50% {
-    text-shadow: 0 0 15px rgba(59,130,246,1),
-                 0 0 30px rgba(59,130,246,0.8);
-    box-shadow: 0 0 30px 8px rgba(59,130,246,0.9),
-                0 0 60px 15px rgba(59,130,246,0.5);
-  }
-}
-
-.glow-hover:hover img {
-  animation: neonPulse 1.5s infinite alternate;
-  border-radius: 1rem;
-  transform: scale(1.05);
-}
-
-.glow-hover:hover h1 {
-  animation: neonPulse 1.5s infinite alternate;
-  color: #3b82f6; /* azul Tailwind 500 */
-}
     </style>
 
  <!-- Open Graph -->
@@ -125,18 +99,13 @@
         class="container mx-auto flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8"
       >
         <!-- Logo -->
-        <div class="md:w-1/4 text-center w-auto transition-all duration-300 transform hover:scale-105">
+        <div class="md:w-1/4 text-center">
           <a href="https://www.olhoderapina.com.br/">
-            <img 
-              src="./img/logo.png" 
-              alt="Logo" 
-              class="mx-auto h-28 w-auto transition-all duration-300 transform hover:scale-105 "
-            />
+            <img src="./img/logo.png" alt="Logo" class="mx-auto h-28 w-auto transition-all duration-300 transform hover:scale-105" />
           </a>
+
           <a href="https://www.olhoderapina.com.br/" >
-            <h1 class="text-3xl text-black text-center mt-6 hover:text-blue-600 transition-all duration-300">
-              OLHO DE RAPINA
-            </h1>
+            <h1 class="text-3xl text-black text-center mt-6 hover:text-blue-600 transition-colors duration-300">OLHO DE RAPINA</h1>
           </a>
         </div>
 
@@ -147,7 +116,7 @@
             <img
               src="image/eclip.png"
               alt="Destaque Imagem"
-              class="mx-auto h-28 w-auto transition-all duration-300 transform hover:scale-105" 
+              class="mt-2 rounded"
             />
           </a>
           <p class="text-black text-sm">
