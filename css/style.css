@@ -1,5 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  font-size: 18px; /* aumenta o tamanho base (equivalente a 1.125rem) */
 }
 
 img {
