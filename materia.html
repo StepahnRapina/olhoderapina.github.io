@@ -47,6 +47,7 @@
   <meta name="twitter:image" content="./img/logo.png" />
 
    <!-- Fim OPEN GRAPH -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> 
 </head>
   <body class="bg-gray-100 font-sans text-black">
     <!-- ========== NAVBAR ========== -->
@@ -94,7 +95,7 @@
     </nav>
 
     <!-- ========== HEADER ========== -->
-    <header class="bg-yellow-400 py-8">
+    <header class="py-8" style="background: radial-gradient(circle, #1e3a8a 0%, #2563eb 50%, #93c5fd 100%);">
       <div
         class="container mx-auto flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8"
       >
@@ -105,13 +106,13 @@
           </a>
 
           <a href="https://www.olhoderapina.com.br/" >
-            <h1 class="text-3xl text-black text-center mt-6 hover:text-blue-600 transition-colors duration-300">OLHO DE RAPINA</h1>
+            <h1 class="text-3xl text-yellow-400 text-center text-bold mt-6 hover:text-yellow-200 transition-colors duration-300"><strong>OLHO DE RAPINA</strong></h1>
           </a>
         </div>
 
         <!-- Destaque -->
         <div class="md:w-1/4 text-center">
-          <h2 class="text-2xl text-black">DESTAQUE</h2>
+          <h2 class="text-2xl text-yellow-400"><strong>DESTAQUE</strong></h2>
           <a href="./eclipse07-09-25.html">
             <img
               src="image/eclip.png"
@@ -119,7 +120,7 @@
               class="mt-2 rounded"
             />
           </a>
-          <p class="text-black text-sm">
+          <p class="text-yellow-400 text-sm">
             7 de setembro às 15:08 (Hora de Brasília)<br />
             Eclipse Lunar total<br />
             <strong>Não será visível do Brasil.</strong>
@@ -128,7 +129,7 @@
 
         <!-- APOD -->
         <div class="md:w-1/4 text-center">
-          <h2 class="text-2xl text-black">APOD da NASA</h2>
+          <h2 class="text-2xl text-yellow-400"><strong>APOD da NASA</strong></h2>
           <img
             src="https://apod.nasa.gov/apod/image/230428.jpg"
             alt="APOD"
@@ -138,7 +139,7 @@
 
         <!-- Fase da Lua -->
         <div class="md:w-1/4 text-center">
-          <h2 class="text-2xl text-black">Fase da Lua Hoje</h2>
+          <h2 class="text-2xl text-yellow-400"><strong>Fase da Lua Hoje</strong></h2>
           <div id="moon-phase"></div>
         </div>
       </div>
@@ -263,53 +264,82 @@
           <!-- Grid de destaques -->
           
 
-          <!-- Grid de destaques -->
-          <div class="grid md:grid-cols-4 gap-4">
-            <div>
-              <div class="relative w-full" style="aspect-ratio: 16/9">
-                <iframe
-                  class="absolute inset-0 w-full h-full rounded"
-                  src="https://www.youtube.com/embed/IyNoZOdOx7g"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                >
-                </iframe>
+                    <div class="grid md:grid-cols-3 gap-4"> 
+            
+                <!-- destaque 01 -->
+              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
+                <div class="relative w-full" style="aspect-ratio: 16/9">
+                  <img src="image/imgs_dia/foto018.jpg" alt="Destaque Imagem">
+                </div>
+<h2 class="font-sans font-bold text-xl text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
+                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
+                <p></p>
+                <a href="./eclipse07-09-25.html" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Leia na íntegra</a>
               </div>
-              <h3 class="font-bold">Título do Destaque 4</h3>
-              <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
+            
+            <!-- destaque 02 -->
+ 
+              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
+                <div class="relative w-full" style="aspect-ratio: 16/9">
+                  <iframe
+                    class="absolute inset-0 w-full h-full rounded"
+                    src="https://www.youtube.com/embed/IyNoZOdOx7g"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                  >
+                  </iframe>
+                </div>
+                <h2 class="font-sans font-bold text-lg text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
+                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
+                <p></p>
+                <a href="https://www.youtube.com/embed/IyNoZOdOx7g" target="_blank" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Veja mais</a>
+              </div>
+
+            <!-- destaque 03 -->
+
+              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
+                <div class="relative w-full" style="aspect-ratio: 16/9">
+                  <iframe
+                    class="absolute inset-0 w-full h-full rounded"
+                    src="https://www.youtube.com/embed/IyNoZOdOx7g"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                  >
+                  </iframe>
+                </div>
+                <h2 class="font-sans font-bold text-lg text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
+                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
+                <p></p>
+                <a href="https://www.youtube.com/embed/IyNoZOdOx7g" target="_blank" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Veja mais</a>
+              </div>
             </div>
-            <div>
-              <img
-                src="https://placehold.co/300x200"
-                class="rounded mb-2 w-full object-cover"
-              />
-              <h3 class="font-bold">Título do Destaque 2</h3>
-              <p class="text-sm text-gray-600">Resumo breve da notícia 2.</p>
+
+            <!-- início da imagem do dia -->
+
+            <div class="shadow-lg bg-blue-100 rounded-lg p-4">
+              <h3 class="mb-4 font-bold">IMAGEM DO DIA</h3>
+              <div class="flex justify-between items-center">
+                <button id="anterior" class="text-3xl text-gray-700 hover:text-yellow-500 transition duration-300">
+                  <i class="fas fa-chevron-circle-left"></i>
+                </button>
+                <a id="linkImagem" href="javascript:void(0);">
+                  <img id="imagem" alt="Imagem rotativa" class="max-w-full h-auto rounded-lg shadow-md" />
+                </a>
+                <button id="proxima" class="text-3xl text-gray-700 hover:text-yellow-500 transition duration-300">
+                  <i class="fas fa-chevron-circle-right"></i>
+                </button>
+              </div>
             </div>
-            <div>
-              <img
-                src="https://placehold.co/300x200"
-                class="rounded mb-2 w-full object-cover"
-              />
-              <h3 class="font-bold">Título do Destaque 3</h3>
-              <p class="text-sm text-gray-600">Resumo breve da notícia 3.</p>
-            </div>
-            <div>
-              <img
-                src="https://placehold.co/300x200"
-                class="rounded mb-2 w-full object-cover"
-              />
-              <h3 class="font-bold">Título do Destaque 4</h3>
-              <p class="text-sm text-gray-600">Resumo breve da notícia 4.</p>
-            </div>
-          </div>
 
 
           <!-- Linha divisória vermelha -->
           <!--<div class="border-b-2 border-yellow-200 my-6"></div>-->
 
+                  <!-- Coluna lateral -->
         </section>
         </section>
         <aside class="space-y-6">
@@ -319,22 +349,22 @@
             </h3>
             <ul class="space-y-2 text-sm">
               <li>
-                <a href="luafases/faselua.html" class="hover:text-yellow-500"
+                <a href="luafases/faselua.html" class="text-base hover:text-yellow-500"
                   >Matéria popular 1</a
                 >
               </li>
               <li>
-                <a href="luafases/faselua2.html" class="hover:text-yellow-500"
+                <a href="luafases/faselua2.html" class="text-base hover:text-yellow-500"
                   >Matéria popular 2</a
                 >
               </li>
               <li>
-                <a href="luafases/faselua3.html" class="hover:text-yellow-500"
+                <a href="luafases/faselua3.html" class="text-base hover:text-yellow-500"
                   >Matéria popular 3</a
                 >
               </li>
               <li>
-                <a href="luafases/faselua4.html" class="hover:text-yellow-500"
+                <a href="luafases/faselua4.html" class="text-base hover:text-yellow-500"
                   >Matéria popular 4</a
                 >
               </li>
@@ -343,7 +373,7 @@
 
           <!-- Newsletter com caixa branca, bordas arredondadas e borda vermelha -->
           <div class="bg-white rounded-lg border-2 border-500 p-4">
-            <h3 class="font-bold mb-3 border-b pb-2">Newsletter</h3>
+            <h3 class="font-bold mb-3 border-b pb-2 text-base">Newsletter</h3>
             <input
               type="email"
               placeholder="Digite seu e-mail"
@@ -364,8 +394,8 @@
               alt="Imagem do Carrossel"
               class="rounded mb-2 w-full object-cover"
             />
-            <h3 id="carousel-title" class="font-bold">Título 1</h3>
-            <p id="carousel-description" class="text-sm text-gray-600">
+            <h3 id="carousel-title" class="font-bold text-base">Título 1</h3>
+            <p id="carousel-description" class="text-base text-gray-600">
               Resumo breve da notícia 1.
             </p>
           </div>
@@ -379,7 +409,7 @@
                 class="rounded mb-2 w-full object-cover"
               />
               <h3 class="font-bold">Título do Destaque 1</h3>
-              <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
+              <p class="text-base text-gray-600">Resumo breve da notícia 1.</p>
             </div>
           </div>
           <!--  cartão-->
@@ -394,14 +424,14 @@
             <div class="space-y-2 text-center sm:text-left">
               <div class="space-y-0.5">
                 <p class="text-lg font-semibold text-black">Rapina</p>
-                <p class="font-medium text-gray-500">
+                <p class="font-medium text-base text-gray-500">
                   Coiso coisado que coisa a coisa
                 </p>
               </div>
               <button
-                class="border-yellow-500 text-black-500 hover:border-transparent hover:bg-yellow-500 hover:text-white active:bg-yellow-500 ..."
+                class=" border-yellow-500 text-black-500 hover:border-transparent hover:bg-yellow-500 hover:text-white active:bg-yellow-500 rounded-full px-4 py-1 text-sm font-semibold border-2 transition"
               >
-                Message
+                Fala que eu te escuito
               </button>
             </div>
             <!--fim cartão-->
