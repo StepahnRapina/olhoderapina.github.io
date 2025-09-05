@@ -1,0 +1,29 @@
+{
+  "grid": [
+    {
+      "tipo": "imagem",
+      "titulo": "Equinócio: equilíbrio entre dia e noite, tradições e como observar o fenômeno em 2025",
+      "imagem": "image/materias/equinocio.jpg",
+      "descricao": "O equinócio é um fenômeno astronômico que acontece duas vezes ao ano, em março e setembro, marcando a chegada da primavera em um hemisfério e do outono no outro. Seu nome vem do latim aequinoctium, que significa “noite igual”, porque neste momento a duração do dia e da noite é praticamente a mesma em quase todo o planeta.",
+      "link": "./equinocio.html"
+    },
+    {
+      "tipo": "video",
+      "titulo": "Cervejaria Rapinovisk",
+      "video": "https://www.youtube.com/embed/cyuOcyvMysA",
+      "descricao": "Veja como é fabricada a famosa RapiBeer"
+    },
+    {
+      "tipo": "video",
+      "titulo": "A Maçã de Branca de Neve e o Fruto do Éden: Coincidência ou Simbolismo Oculto nas Histórias?",
+      "video": "https://www.youtube.com/embed/zuHi5_bnMS4",
+      "descricao": "Descubra as intrigantes conexões entre a maçã envenenada de Branca de Neve e o fruto do Éden. Seria coincidência ou influência do simbolismo bíblico nas histórias que nos encantam até hoje?"
+    },
+    {
+      "tipo": "video",
+      "titulo": "Lewis Hamilton Pilota a Icônica McLaren de Ayrton Senna no GP de São Paulo Um Tributo Inesquecível",
+      "video": "https://www.youtube.com/embed/zl1EMFVsr9Q",
+      "descricao": "Lewis Hamilton Pilota a Icônica McLaren de Ayrton Senna no GP de São Paulo"
+    }
+  ]
+}

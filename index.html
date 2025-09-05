@@ -95,57 +95,10 @@
     </nav>
 
     <!-- ========== HEADER ========== -->
-    <header class="py-8" style="background: radial-gradient(circle, #1e3a8a 0%, #2563eb 50%, #93c5fd 100%);">
-      <div
-        class="container mx-auto flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8"
-      >
-        <!-- Logo -->
-        <div class="md:w-1/4 text-center">
-          <a href="https://www.olhoderapina.com.br/">
-            <img src="./img/logo.png" alt="Logo" class="mx-auto h-28 w-auto transition-all duration-300 transform hover:scale-105" />
-          </a>
-
-          <a href="https://www.olhoderapina.com.br/" >
-            <h1 class="text-3xl text-yellow-400 text-center text-bold mt-6 hover:text-yellow-200 transition-colors duration-300"><strong>OLHO DE RAPINA</strong></h1>
-          </a>
-        </div>
-
-        <!-- Destaque -->
-        <div class="md:w-1/4 text-center">
-          <h2 class="text-2xl text-yellow-400"><strong>DESTAQUE</strong></h2>
-          <a href="./eclipse07-09-25.html">
-            <img
-              src="image/eclip.png"
-              alt="Destaque Imagem"
-              class="mt-2 rounded"
-            />
-          </a>
-          <p class="text-yellow-400 text-sm">
-            7 de setembro às 15:08 (Hora de Brasília)<br />
-            Eclipse Lunar total<br />
-            <strong>Não será visível do Brasil.</strong>
-          </p>
-        </div>
-
-        <!-- DESTAQUE 2 -->
-        <div class="md:w-1/4 text-center">
-          <h2 class="text-2xl text-yellow-400"><strong>CHEGADA DA PRIMAVERA</strong></h2>
-          <a href="./equinocio.html"><img src="./image/materias/primaveraequinocio.png"
-            class="mt-2 rounded mx-auto"
-          />
-          </a>
-          <p class="text-yellow-400 text-sm">
-            22 de setembro de 2025 às 18h19<br />
-            <strong>Horário local de Brasília.</strong>
-          </p>
-        </div>
-
-        <!-- Fase da Lua -->
-        <div class="md:w-1/4 text-center">
-          <h2 class="text-2xl text-yellow-400"><strong>Fase da Lua Hoje</strong></h2>
-          <div id="moon-phase"></div>
-        </div>
-      </div>
+    <header>
+      <div id="site-header"></div>
+      <script src="./data/header.js"></script>
+      <script src="js/moon.js" defer></script>
     </header>
     <nav class="bg-gray-100 border-b text-sm font-medium shadow-sm">
       <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
@@ -193,142 +146,37 @@
           <div class="border-b-2 border-yellow-500 my-6"></div>
 
           <!-- Grid de destaques -->
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <div class="relative w-full" style="aspect-ratio: 16/9">
-                <a href="./equinocio.html"><img src="image/materias/equinocio.jpg" alt="Equinócio"></a>
-              </div><a href="./equinocio.html">
-              <h3 class="font-bold">Equinócio: equilíbrio entre dia e noite, tradições e como observar o fenômeno em 2025</h3>
-              <p class="text-base text-gray-600">
-                O equinócio é um fenômeno astronômico que acontece duas vezes ao ano, em março e setembro, marcando a chegada da primavera em um hemisfério e do outono no outro. Seu nome vem do latim aequinoctium, que significa “noite igual”, porque neste momento a duração do dia e da noite é praticamente a mesma em quase todo o planeta.
-              </p></a>
-            </div>
-            <div>
-              <div class="relative w-full" style="aspect-ratio: 16/9">
-                <iframe
-                  class="absolute inset-0 w-full h-full rounded"
-                  src="https://www.youtube.com/embed/cyuOcyvMysA"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                >
-                </iframe>
-              </div>
-              <h3 class="font-bold">Cervejaria Rapinovisk</h3>
-              <p class="text-base text-gray-600">
-                Veja como é fabricada a famosa RapiBeer
-              </p>
-            </div>
-            <div>
-              <div class="relative w-full" style="aspect-ratio: 16/9">
-                <iframe
-                  class="absolute inset-0 w-full h-full rounded"
-                  src="https://www.youtube.com/embed/zuHi5_bnMS4"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                >
-                </iframe>
-              </div>
-              <h3 class="font-bold">A Maçã de Branca de Neve e o Fruto do Éden: Coincidência ou Simbolismo Oculto nas Histórias?</h3>
-              <p class="text-base text-gray-600">
-                Descubra as intrigantes conexões entre a maçã envenenada de Branca de Neve e o fruto do Éden. Seria coincidência ou influência do simbolismo bíblico nas histórias que nos encantam até hoje?
-              </p>
-            </div>  
-            <div>
-              <div class="relative w-full" style="aspect-ratio: 16/9">
-                <iframe
-                  class="absolute inset-0 w-full h-full rounded"
-                  src="https://www.youtube.com/embed/zl1EMFVsr9Q"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                >
-                </iframe>
-              </div>
-              <h3 class="font-bold">Lewis Hamilton Pilota a Icônica McLaren de Ayrton Senna no GP de São Paulo Um Tributo Inesquecível</h3>
-              <p class="text-base text-gray-600">
-                Lewis Hamilton Pilota a Icônica McLaren de Ayrton Senna no GP de São Paulo 
-              </p>
-            </div>  
-          </div>      <!-- Linha divisória vermelha -->
+          <!-- Grid -->
+            <div id="grid-container" class="grid md:grid-cols-2 gap-4"></div>
+            <script src="data/grid.js"></script>
+
+      <!-- Linha divisória vermelha -->
           <div class="border-b-2 border-yellow-500 my-6"></div>
 
           <!-- Grid de destaques -->
         
-          <div class="grid md:grid-cols-3 gap-4"> 
+          <div class="grid md:grid-cols-1 gap-4"> 
             
-                <!-- destaque 01 -->
-              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="relative w-full" style="aspect-ratio: 16/9">
-                  <img src="image/imgs_dia/foto018.jpg" alt="Destaque Imagem">
-                </div>
-<h2 class="font-sans font-bold text-xl text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
-                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
-                <p></p>
-                <a href="./eclipse07-09-25.html" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Leia na íntegra</a>
-              </div>
-            
-            <!-- destaque 02 -->
- 
-              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="relative w-full" style="aspect-ratio: 16/9">
-                  <iframe
-                    class="absolute inset-0 w-full h-full rounded"
-                    src="https://www.youtube.com/embed/IyNoZOdOx7g"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                  >
-                  </iframe>
-                </div>
-                <h2 class="font-sans font-bold text-lg text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
-                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
-                <p></p>
-                <a href="https://www.youtube.com/embed/IyNoZOdOx7g" target="_blank" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Veja mais</a>
-              </div>
-
-            <!-- destaque 03 -->
-
-              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="relative w-full" style="aspect-ratio: 16/9">
-                  <iframe
-                    class="absolute inset-0 w-full h-full rounded"
-                    src="https://www.youtube.com/embed/IyNoZOdOx7g"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                  >
-                  </iframe>
-                </div>
-                <h2 class="font-sans font-bold text-lg text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
-                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
-                <p></p>
-                <a href="https://www.youtube.com/embed/IyNoZOdOx7g" target="_blank" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Veja mais</a>
-              </div>
+                <!-- destaques  -->
+          <div id="destaques-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+          <script src="data/destaques.js"></script>
+          </div>
+          
+          <!--Imagem do dia-->
+          <div class="shadow-lg bg-blue-100 rounded-lg p-4">
+            <h3 class="mb-4 font-bold">IMAGEM DO DIA</h3>
+            <div class="flex justify-between items-center">
+              <button id="anterior" class="text-3xl text-gray-700 hover:text-yellow-500 transition duration-300">
+              <i class="fas fa-chevron-circle-left"></i>
+              </button>
+              <a id="linkImagem" href="javascript:void(0);">
+                <img id="imagem" alt="Imagem rotativa" class="max-w-full h-auto rounded-lg shadow-md" />
+              </a>
+              <button id="proxima" class="text-3xl text-gray-700 hover:text-yellow-500 transition duration-300">
+                <i class="fas fa-chevron-circle-right"></i>
+              </button>
             </div>
-
-            <!-- início da imagem do dia -->
-
-            <div class="shadow-lg bg-blue-100 rounded-lg p-4">
-              <h3 class="mb-4 font-bold">IMAGEM DO DIA</h3>
-              <div class="flex justify-between items-center">
-                <button id="anterior" class="text-3xl text-gray-700 hover:text-yellow-500 transition duration-300">
-                  <i class="fas fa-chevron-circle-left"></i>
-                </button>
-                <a id="linkImagem" href="javascript:void(0);">
-                  <img id="imagem" alt="Imagem rotativa" class="max-w-full h-auto rounded-lg shadow-md" />
-                </a>
-                <button id="proxima" class="text-3xl text-gray-700 hover:text-yellow-500 transition duration-300">
-                  <i class="fas fa-chevron-circle-right"></i>
-                </button>
-              </div>
-            </div>
+          </div>
           
           <!-- código antigo -->
           

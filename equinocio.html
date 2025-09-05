@@ -95,57 +95,10 @@
     </nav>
 
     <!-- ========== HEADER ========== -->
-    <header class="py-8" style="background: radial-gradient(circle, #1e3a8a 0%, #2563eb 50%, #93c5fd 100%);">
-      <div
-        class="container mx-auto flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8"
-      >
-        <!-- Logo -->
-        <div class="md:w-1/4 text-center">
-          <a href="https://www.olhoderapina.com.br/">
-            <img src="./img/logo.png" alt="Logo" class="mx-auto h-28 w-auto transition-all duration-300 transform hover:scale-105" />
-          </a>
-
-          <a href="https://www.olhoderapina.com.br/" >
-            <h1 class="text-3xl text-yellow-400 text-center text-bold mt-6 hover:text-yellow-200 transition-colors duration-300"><strong>OLHO DE RAPINA</strong></h1>
-          </a>
-        </div>
-
-        <!-- Destaque -->
-        <div class="md:w-1/4 text-center">
-          <h2 class="text-2xl text-yellow-400"><strong>DESTAQUE</strong></h2>
-          <a href="./eclipse07-09-25.html">
-            <img
-              src="image/eclip.png"
-              alt="Destaque Imagem"
-              class="mt-2 rounded"
-            />
-          </a>
-          <p class="text-yellow-400 text-sm">
-            7 de setembro às 15:08 (Hora de Brasília)<br />
-            Eclipse Lunar total<br />
-            <strong>Não será visível do Brasil.</strong>
-          </p>
-        </div>
-
-        <!-- DESTAQUE 2 -->
-        <div class="md:w-1/4 text-center">
-          <h2 class="text-2xl text-yellow-400"><strong>CHEGADA DA PRIMAVERA</strong></h2>
-          <a href="./equinocio.html"><img src="./image/materias/primaveraequinocio.png"
-            class="mt-2 rounded mx-auto"
-          />
-          </a>
-          <p class="text-yellow-400 text-sm">
-            22 de setembro de 2025 às 18h19<br />
-            <strong>Horário local de Brasília.</strong>
-          </p>
-        </div>
-
-        <!-- Fase da Lua -->
-        <div class="md:w-1/4 text-center">
-          <h2 class="text-2xl text-yellow-400"><strong>Fase da Lua Hoje</strong></h2>
-          <div id="moon-phase"></div>
-        </div>
-      </div>
+    <header>
+      <div id="site-header"></div>
+      <script src="./data/header.js"></script>
+      <script src="js/moon.js" defer></script>
     </header>
     <nav class="bg-gray-100 border-b text-sm font-medium shadow-sm">
       <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
@@ -323,60 +276,12 @@ posição das constelações visíveis ao anoitecer.</span></p>
 
           <!-- Grid de destaques -->
           
-
-                    <div class="grid md:grid-cols-3 gap-4"> 
-            
-                <!-- destaque 01 -->
-              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="relative w-full" style="aspect-ratio: 16/9">
-                  <img src="image/imgs_dia/foto018.jpg" alt="Destaque Imagem">
-                </div>
-<h2 class="font-sans font-bold text-xl text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
-                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
-                <p></p>
-                <a href="./eclipse07-09-25.html" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Leia na íntegra</a>
-              </div>
-            
-            <!-- destaque 02 -->
- 
-              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="relative w-full" style="aspect-ratio: 16/9">
-                  <iframe
-                    class="absolute inset-0 w-full h-full rounded"
-                    src="https://www.youtube.com/embed/IyNoZOdOx7g"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                  >
-                  </iframe>
-                </div>
-                <h2 class="font-sans font-bold text-lg text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
-                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
-                <p></p>
-                <a href="https://www.youtube.com/embed/IyNoZOdOx7g" target="_blank" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Veja mais</a>
-              </div>
-
-            <!-- destaque 03 -->
-
-              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="relative w-full" style="aspect-ratio: 16/9">
-                  <iframe
-                    class="absolute inset-0 w-full h-full rounded"
-                    src="https://www.youtube.com/embed/IyNoZOdOx7g"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                  >
-                  </iframe>
-                </div>
-                <h2 class="font-sans font-bold text-lg text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
-                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
-                <p></p>
-                <a href="https://www.youtube.com/embed/IyNoZOdOx7g" target="_blank" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Veja mais</a>
-              </div>
-            </div>
+          <div class="grid md:grid-cols-1 gap-4"> 
+          
+            <div id="destaques-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            <script src="data/destaques.js"></script>
+             
+          </div>
 
           <!-- Linha divisória vermelha -->
           <!--<div class="border-b-2 border-yellow-200 my-6"></div>-->
