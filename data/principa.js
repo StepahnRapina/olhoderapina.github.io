@@ -29,7 +29,7 @@ async function carregarPrincipa() {
       )
       .join("");
   } catch (erro) {
-    console.error("Erro ao carregar grid:", erro);
+    console.error("Erro ao carregar principa:", erro);
   }
 }
 
