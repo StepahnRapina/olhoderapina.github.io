@@ -9,6 +9,11 @@ async function carregarPrincipa() {
       .map(
         (d) => `
       <div>
+              ${
+          d.link
+            ? `<a href="${d.link}"><h3 class="font-bold">${d.titulo}</h3><p class="text-base text-gray-600">${d.descricao}</p></a>`
+            : `<h3 class="font-bold">${d.titulo}</h3><p class="text-base text-gray-600">${d.descricao}</p>`
+        }
         <div class="relative w-full" style="aspect-ratio: 16/9">
           ${
             d.tipo === "imagem"
@@ -18,11 +23,7 @@ async function carregarPrincipa() {
                 allowfullscreen loading="lazy"></iframe>`
           }
         </div>
-        ${
-          d.link
-            ? `<a href="${d.link}"><h3 class="font-bold">${d.titulo}</h3><p class="text-base text-gray-600">${d.descricao}</p></a>`
-            : `<h3 class="font-bold">${d.titulo}</h3><p class="text-base text-gray-600">${d.descricao}</p>`
-        }
+
       </div>
     `
       )
