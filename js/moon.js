@@ -43,7 +43,7 @@ async function carregarFase() {
       <img src="${
         imagens[faseAtual]
       }" alt="${faseAtual}" class="mx-auto block w-32 h-auto">
-      <p class="text-yellow-400 text-sm">De ${formatarData(inicio)} até ${
+      <p class="text-yellow-400 text-sm" font-bold>De ${formatarData(inicio)} até ${
       fim ? formatarData(fim) : "..."
     }</p>
     `;
