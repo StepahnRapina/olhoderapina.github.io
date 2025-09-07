@@ -8,9 +8,9 @@
       "linkTexto": "Leia mais..."
     },
     {
-      "titulo": "Eclipse lunar total de setembro de 2025",
-      "link": "./eclipse07-09-25.html",
-      "imagem": "./image/imgs_dia/foto018.jpg",
+      "titulo": "Todas as fases da Lua para 2025",
+      "link": "./faselua2025.html",
+      "imagem": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/lunar-science/internal_resources/603/moon-phases-jpl.png?w=1700&h=904&fit=clip&crop=faces%2Cfocalpoint",
       "descricao": "No dia 7 de setembro de 2025, a Lua ficará totalmente encoberta pela sombra da Terra.",
       "linkTexto": "Ver detalhes"
     },
@@ -22,11 +22,18 @@
       "linkTexto": "Descubra mais"
     },
     {
-      "titulo": "James Webb revela segredos do universo primitivo",
-      "link": "./jwst.html",
-      "imagem": "./image/materias/jwst.jpg",
-      "descricao": "Novas imagens do telescópio James Webb mostram galáxias formadas há bilhões de anos.",
-      "linkTexto": "Confira"
+      "titulo": "Primavera 2025: flores, ciência e cultura",
+      "link": "./equinocio.html",
+      "imagem": "./image/materias/primavera.png",
+      "descricao": "A chegada da primavera traz mudanças climáticas e um espetáculo de cores.",
+      "linkTexto": "Descubra mais"
+    },
+    {
+      "titulo": "Eclipse lunar total de setembro de 2025",
+      "link": "./eclipse07-09-25.html",
+      "imagem": "./image/imgs_dia/foto018.jpg",
+      "descricao": "No dia 7 de setembro de 2025, a Lua ficará totalmente encoberta pela sombra da Terra.",
+      "linkTexto": "Ver detalhes"
     }
   ]
 }
