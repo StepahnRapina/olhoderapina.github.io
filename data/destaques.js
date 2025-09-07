@@ -30,7 +30,7 @@ async function carregarDestaques() {
 
         <a href="${
           d.link
-        }" target="" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">${
+        }#leitura" target="" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">${
           d.linkTexto
         }</a>
       </div>

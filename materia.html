@@ -214,59 +214,12 @@
           <!-- Grid de destaques -->
           
 
-                    <div class="grid md:grid-cols-3 gap-4"> 
-            
-                <!-- destaque 01 -->
-              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="relative w-full" style="aspect-ratio: 16/9">
-                  <img src="image/imgs_dia/foto018.jpg" alt="Destaque Imagem">
-                </div>
-<h2 class="font-sans font-bold text-xl text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
-                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
-                <p></p>
-                <a href="./eclipse07-09-25.html" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Leia na íntegra</a>
-              </div>
-            
-            <!-- destaque 02 -->
- 
-              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="relative w-full" style="aspect-ratio: 16/9">
-                  <iframe
-                    class="absolute inset-0 w-full h-full rounded"
-                    src="https://www.youtube.com/embed/IyNoZOdOx7g"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                  >
-                  </iframe>
-                </div>
-                <h2 class="font-sans font-bold text-lg text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
-                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
-                <p></p>
-                <a href="https://www.youtube.com/embed/IyNoZOdOx7g" target="_blank" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Veja mais</a>
-              </div>
-
-            <!-- destaque 03 -->
-
-              <div class="bg-blue-700 text-white rounded-t-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="relative w-full" style="aspect-ratio: 16/9">
-                  <iframe
-                    class="absolute inset-0 w-full h-full rounded"
-                    src="https://www.youtube.com/embed/IyNoZOdOx7g"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    loading="lazy"
-                  >
-                  </iframe>
-                </div>
-                <h2 class="font-sans font-bold text-lg text-yellow-200 p-4 flex flex-col gap-3 text-center">Eclipse do dia 7 de setembro</h2>
-                <p class=" bg-blue-500 text-base text-justify text-white p-4 flex flex-col gap-3 hyphens-auto">Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como "Lua de Sangue".</p>
-                <p></p>
-                <a href="https://www.youtube.com/embed/IyNoZOdOx7g" target="_blank" class="mt-auto inline-block bg-yellow-400 text-black text-center font-semibold py-2 px-4 hover:bg-yellow-300 hover:text-blue-700 transition transition-all duration-300 transform hover:scale-105">Veja mais</a>
-              </div>
-            </div>
+          <div class="grid md:grid-cols-1 gap-4"> 
+            <div id="destaques-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            <div class="border-b-2 border-yellow-500 my-6"></div>
+            <script src="data/destaques.js"></script>
+            <div id="main-container"></div>       
+          </div>
 
           <!-- Linha divisória vermelha -->
           <!--<div class="border-b-2 border-yellow-200 my-6"></div>-->
@@ -275,7 +228,10 @@
         </section>
         </section>
         <aside class="space-y-6">
-          <div>
+          
+          <div id="mais-lidas-container"></div>
+
+          <!--<div>
             <h3 class="grid md:grid-cols-2 gap-4 font-bold mb-3 border-b pb-2">
               Mais Lidas
             </h3>
@@ -301,8 +257,7 @@
                 >
               </li>
             </ul>
-          </div>
-
+          </div>-->
           <!-- Newsletter com caixa branca, bordas arredondadas e borda vermelha -->
           <div class="bg-white rounded-lg border-2 border-500 p-4">
             <h3 class="font-bold mb-3 border-b pb-2 text-base">Newsletter</h3>
@@ -444,5 +399,8 @@
     <script src="js/moon.js" defer></script>
     <script src="js/carousel.js" defer></script>
     <script src="js/imagemDoDia.js" defer></script>
+    <script src="./data/destaque.js"></script>
+    <script src="data/main.js"></script>
+    <script src="data/mais-lidas.js"></script>
   </body>
 </html>

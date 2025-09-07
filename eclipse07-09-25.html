@@ -117,7 +117,7 @@
         <section class="lg:col-span-2 space-y-6">
           <!-- Notícia em destaque -->
           <div class="space-y-3 text-gray-700 text-sm leading-relaxed">
-            <h3 id="eclipse" class="text-2xl font-bold mb-2">
+            <h3 id="leitura" class="text-2xl font-bold mb-2">
               Fascínio celeste: o eclipse total da Lua em 7 de setembro de 2025
             </h3>
 
@@ -331,47 +331,51 @@
         
           <div class="grid md:grid-cols-1 gap-4"> 
             
-                <!-- destaque 01 -->
+          <div class="grid md:grid-cols-1 gap-4"> 
+            
             <div id="destaques-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            <div class="border-b-2 border-yellow-500 my-6"></div>
             <script src="data/destaques.js"></script>
-                          
+            <div id="main-container"></div>       
           </div>
           <!-- Fim do grid de destaques -->
 
         </section>
         </section>
         <aside class="space-y-6">
-          <div>
+          
+          <div id="mais-lidas-container"></div>
+
+          <!--<div>
             <h3 class="grid md:grid-cols-2 gap-4 font-bold mb-3 border-b pb-2">
               Mais Lidas
             </h3>
             <ul class="space-y-2 text-sm">
               <li>
-                <a href="luafases/faselua.html" class="hover:text-yellow-500"
+                <a href="luafases/faselua.html" class="text-base hover:text-yellow-500"
                   >Matéria popular 1</a
                 >
               </li>
               <li>
-                <a href="luafases/faselua2.html" class="hover:text-yellow-500"
+                <a href="luafases/faselua2.html" class="text-base hover:text-yellow-500"
                   >Matéria popular 2</a
                 >
               </li>
               <li>
-                <a href="luafases/faselua3.html" class="hover:text-yellow-500"
+                <a href="luafases/faselua3.html" class="text-base hover:text-yellow-500"
                   >Matéria popular 3</a
                 >
               </li>
               <li>
-                <a href="luafases/faselua4.html" class="hover:text-yellow-500"
+                <a href="luafases/faselua4.html" class="text-base hover:text-yellow-500"
                   >Matéria popular 4</a
                 >
               </li>
             </ul>
-          </div>
-
+          </div>-->
           <!-- Newsletter com caixa branca, bordas arredondadas e borda vermelha -->
           <div class="bg-white rounded-lg border-2 border-500 p-4">
-            <h3 class="font-bold mb-3 border-b pb-2">Newsletter</h3>
+            <h3 class="font-bold mb-3 border-b pb-2 text-base">Newsletter</h3>
             <input
               type="email"
               placeholder="Digite seu e-mail"
@@ -392,8 +396,8 @@
               alt="Imagem do Carrossel"
               class="rounded mb-2 w-full object-cover"
             />
-            <h3 id="carousel-title" class="font-bold">Título 1</h3>
-            <p id="carousel-description" class="text-sm text-gray-600">
+            <h3 id="carousel-title" class="font-bold text-base">Título 1</h3>
+            <p id="carousel-description" class="text-base text-gray-600">
               Resumo breve da notícia 1.
             </p>
           </div>
@@ -407,7 +411,7 @@
                 class="rounded mb-2 w-full object-cover"
               />
               <h3 class="font-bold">Título do Destaque 1</h3>
-              <p class="text-sm text-gray-600">Resumo breve da notícia 1.</p>
+              <p class="text-base text-gray-600">Resumo breve da notícia 1.</p>
             </div>
           </div>
           <!--  cartão-->
@@ -422,14 +426,14 @@
             <div class="space-y-2 text-center sm:text-left">
               <div class="space-y-0.5">
                 <p class="text-lg font-semibold text-black">Rapina</p>
-                <p class="font-medium text-gray-500">
+                <p class="font-medium text-base text-gray-500">
                   Coiso coisado que coisa a coisa
                 </p>
               </div>
               <button
-                class="border-yellow-500 text-black-500 hover:border-transparent hover:bg-yellow-500 hover:text-white active:bg-yellow-500 ..."
+                class=" border-yellow-500 text-black-500 hover:border-transparent hover:bg-yellow-500 hover:text-white active:bg-yellow-500 rounded-full px-4 py-1 text-sm font-semibold border-2 transition"
               >
-                Message
+                Fala que eu te escuito
               </button>
             </div>
             <!--fim cartão-->
@@ -510,5 +514,8 @@
     <script src="js/moon.js" defer></script>
     <script src="js/carousel.js" defer></script>
     <script src="js/imagemDoDia.js" defer></script>
+    <script src="./data/destaque.js"></script>
+    <script src="data/main.js"></script>
+    <script src="data/mais-lidas.js"></script>
   </body>
 </html>

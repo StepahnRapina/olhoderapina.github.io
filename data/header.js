@@ -28,7 +28,7 @@ async function carregarHeader() {
               (d) => `
             <div class="md:w-1/4 text-center">
               <h2 class="text-2xl text-yellow-400"><strong>${d.titulo}</strong></h2>
-              <a href="${d.link}">
+              <a href="${d.link}#leitura">
                 <img src="${d.imagem}" alt="${d.titulo}" class="mt-2 rounded mx-auto"/>
               </a>
               <p class="text-yellow-400 text-sm">${d.descricao}</p>

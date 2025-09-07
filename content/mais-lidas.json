@@ -1,0 +1,22 @@
+{
+  "maisLidas": [
+    {
+      "titulo": "Fases da Lua: Guia Completo",
+      "link": "luafases/faselua.html",
+      "thumb": "./img/lua/fase_0.png"
+    },
+    {
+      "titulo": "Fases da Lua: Guia Completo",
+      "link": "luafases/faselua.html",
+      "thumb": "./img/lua/fase_0.png"
+    },
+    {
+      "titulo": "Superlua de 2025: Quando e Como Ver",
+      "link": "luafases/faselua2.html"
+    },
+    {
+      "titulo": "Lua Azul: O que é e quando acontece",
+      "link": "luafases/faselua4.html"
+    }
+  ]
+}

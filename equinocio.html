@@ -277,10 +277,11 @@ posição das constelações visíveis ao anoitecer.</span></p>
           <!-- Grid de destaques -->
           
           <div class="grid md:grid-cols-1 gap-4"> 
-          
+            
             <div id="destaques-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            <div class="border-b-2 border-yellow-500 my-6"></div>
             <script src="data/destaques.js"></script>
-             
+            <div id="main-container"></div>       
           </div>
 
           <!-- Linha divisória vermelha -->
@@ -290,7 +291,10 @@ posição das constelações visíveis ao anoitecer.</span></p>
         </section>
         </section>
         <aside class="space-y-6">
-          <div>
+          
+          <div id="mais-lidas-container"></div>
+
+          <!--<div>
             <h3 class="grid md:grid-cols-2 gap-4 font-bold mb-3 border-b pb-2">
               Mais Lidas
             </h3>
@@ -316,8 +320,7 @@ posição das constelações visíveis ao anoitecer.</span></p>
                 >
               </li>
             </ul>
-          </div>
-
+          </div>-->
           <!-- Newsletter com caixa branca, bordas arredondadas e borda vermelha -->
           <div class="bg-white rounded-lg border-2 border-500 p-4">
             <h3 class="font-bold mb-3 border-b pb-2 text-base">Newsletter</h3>
@@ -459,5 +462,8 @@ posição das constelações visíveis ao anoitecer.</span></p>
     <script src="js/moon.js" defer></script>
     <script src="js/carousel.js" defer></script>
     <script src="js/imagemDoDia.js" defer></script>
+    <script src="./data/destaque.js"></script>
+    <script src="data/main.js"></script>
+    <script src="data/mais-lidas.js"></script>
   </body>
 </html>
