@@ -41,6 +41,7 @@ async function carregarHeader() {
           <div class="md:w-1/4 text-center">
             <a href="./faselua2025.html#leitura"><h2 class="text-2xl text-yellow-400"><strong>Fase da Lua Hoje</strong></h2>
             <div id="moon-phase"></div>
+            <p class="text-yellow-400 text-sm"><strong>leia mais...</strong></p>
           </div>
         </div>
       </header>
