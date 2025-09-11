@@ -5,7 +5,7 @@
       "titulo": "Eclipse do dia 7/09",
       "imagem": "image/imgs_dia/foto018.jpg",
       "descricao": "Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como \"Lua de Sangue\".",
-      "link": "./eclipse07-09-25.html#eclipse",
+      "link": "./eclipse07-09-25.html",
       "linkTexto": "Leia na íntegra"
     },
     {
@@ -21,7 +21,7 @@
       "titulo": "Equinócio de Primavera",
       "imagem": "./image/materias/primavera.png",
       "descricao": "O equinócio é um fenômeno astronômico que acontece duas vezes ao ano, em março e setembro, marcando a chegada da primavera em um hemisfério e do outono no outro.",
-      "link": "./equinocio.html#leitura",
+      "link": "./equinocio.html",
       "linkTexto": "Veja mais"
     }
   ]
