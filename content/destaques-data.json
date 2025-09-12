@@ -3,16 +3,16 @@
     {
       "tipo": "imagem",
       "titulo": "Eclipse do dia 7/09",
-      "imagem": "image/imgs_dia/foto018.jpg",
-      "descricao": "Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como \"Lua de Sangue\".",
-      "link": "./eclipse07-09-25.html",
+      "imagem": "https://www.olhoderapina.com.br/image/materias/eclsol.jpg",
+      "descricao": "No dia 21 de setembro de 2025 ocorrerá um eclipse solar parcial, visível principalmente no Pacífico Sul..",
+      "link": "./eclipsesolar.html",
       "linkTexto": "Leia na íntegra"
     },
     {
       "tipo": "video",
       "titulo": "A Terra está imóvel?",
       "video": "https://www.youtube.com/embed/IyNoZOdOx7g",
-      "descricao": "Na noite de 7 de setembro de 2025, acontecerá um fenômeno astronômico de grande beleza: um eclipse lunar total, mais conhecido como \"Lua de Sangue\".",
+      "descricao": "A Terra está imóvel ou podemos provar que ela tem sua orbita em torno do Sol e a sua rotação?.",
       "link": "https://www.youtube.com/embed/IyNoZOdOx7g",
       "linkTexto": "Veja no Youtube"
     },
