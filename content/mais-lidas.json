@@ -1,6 +1,11 @@
 {
   "maisLidas": [
     {
+      "titulo": "Equinócio: equilíbrio entre dia e noite",
+      "link": "./ias.html",
+      "thumb": "./image/materias/ias001.png"
+    },
+    {
       "titulo": "Eclipse Solar dia 21 de Setembro de 2025",
       "link": "./eclipsesolar.html",
       "thumb": "./image/materias/eclisolt.png"
