@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Stephan Rapina" />
+    <meta
+      name="description"
+      content="Olho de Rapina - Portal de ciência, filosofia e conhecimento. Notícias, artigos e conteúdos em linguagem simples e acessível."
+      authors="Stephan Rapina"
+    />
+    <title>Olho de Rapina</title>
+
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos próprios -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      } /* evita distorção no celular */
+    </style>
+
+ <!-- Open Graph -->
+  <meta property="og:title" content="Olho de Rapina" />
+  <meta property="og:description" Revista digital do canal Olho de Rapina no Youtube, nos siga aqui, no Youtube e também nas redes sociais, novidades, curiosidades, ciência e filosofia tudo em um só lugar"/>
+  <meta property="og:image" content="https://www.olhoderapina.com.br/img/logo_main.png" />
+  <meta property="og:url" content="https://www.olhoderapina.com.br" />
+  <meta property="og:type" content="website" />
+
+  <!-- Para Twitter (opcional, mas recomendado) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Olho de Rapina"/>
+  <meta name="twitter:description" content=" Revista digital do canal Olho de Rapina no Youtube, nos siga aqui, no Youtube e também nas redes sociais, novidades, curiosidades, ciência e filosofia tudo em um só lugar" />
+  <meta name="twitter:image" content="./img/logo.png" />
+
+   <!-- Fim OPEN GRAPH -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> 
+</head>
+  <body class="bg-gray-100 font-sans text-black">
+    <!-- ========== NAVBAR ========== -->
+    <nav class="bg-black py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <ul class="hidden md:flex space-x-6 text-white">
+          <li><a href="https://www.olhoderapina.com.br">Home</a></li>
+          <li><a href="#">Páginas</a></li>
+          <li><a href="#">Novidades</a></li>
+          <li><a href="#">Patrão</a></li>
+          <li><a href="#">Sobre</a></li>
+        </ul>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-x-twitter"></i
+          ></a>
+        </div>
+
+        <!-- Botão hamburger (somente no celular) -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-white text-2xl focus:outline-none"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden flex-col space-y-3 mt-3 px-6 md:hidden"
+      >
+        <a href="./index.html">Home</a>
+        <a href="#">Páginas</a>
+        <a href="#">Novidades</a>
+        <a href="#">Sobre</a>
+      </div>
+    </nav>
+
+    <!-- ========== HEADER ========== -->
+    <header">
+      <div id="site-header"></div>
+      <script src="./data/header.js"></script>
+      
+    </header>
+    <!--NAV-->
+    <nav class="bg-gray-100 border-b text-sm font-medium shadow-sm">
+      <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
+        <a href="#" class="hover:text-yellow-500 ">Economia</a>
+        <a href="#" class="hover:text-yellow-500">Esporte</a>
+        <a href="#" class="hover:text-yellow-500">TV</a>
+        <a href="#" class="hover:text-yellow-500">Ciência</a>
+        <a href="#" class="hover:text-yellow-500">Tecnologia</a>
+        <a href="#" class="hover:text-yellow-500">Educação</a>
+        <a href="#" class="hover:text-yellow-500">Política</a>
+      </div>
+    </nav>
+    <!-- Esta div garante que o fundo seja branco em toda a largura da página para a seção principal -->
+    <div class="bg-white">
+      <main class="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-3 gap-6">
+        <!-- Coluna principal -->
+        <section class="lg:col-span-2 space-y-6">
+          <!-- Notícia em destaque -->
+          <div class="space-y-3 text-gray-700 text-sm leading-relaxed">
+            <h1 class="text-2xl font-bold mb-4">Inteligência Artificial: Avanços, Benefícios e Desafios de uma Revolução Tecnológica</h1>
+
+<p class="text-gray-700 text-base">
+A inteligência artificial (IA) deixou de ser um conceito restrito à ficção científica para se tornar um dos pilares centrais da transformação digital que vivemos hoje. De ferramentas de produtividade a sistemas complexos que moldam setores inteiros, a IA redefine como trabalhamos, nos comunicamos e nos relacionamos com o mundo. Seus benefícios são inegáveis, mas, ao mesmo tempo, os desafios técnicos, éticos e sociais ainda estão em pauta e exigem atenção constante.
+</p>
+
+<h2 class="text-xl font-semibold mt-6 mb-2">Benefícios e Inovações da IA</h2>
+
+<p class="text-gray-700 text-base">
+A primeira grande contribuição da IA está na automação de processos e no aumento da eficiência. Empresas de diferentes segmentos já utilizam algoritmos inteligentes para otimizar linhas de produção, prever demandas de mercado e personalizar a experiência dos consumidores. Isso se traduz em maior competitividade e redução de custos, ao mesmo tempo em que abre espaço para novas formas de negócio.
+</p>
+
+<p class="text-gray-700 text-base">
+Entre os tipos de inteligência artificial, destacam-se as <strong>IAs generativas</strong>, que têm ganhado grande notoriedade. Elas são capazes de criar conteúdos originais, como textos, imagens, áudios e vídeos. Exemplos práticos vão desde a elaboração automática de relatórios até a produção de obras artísticas digitais. Plataformas como ChatGPT, DALL·E e MidJourney são hoje populares entre usuários comuns e profissionais criativos, expandindo as fronteiras da imaginação humana.
+</p>
+
+<h2 class="text-xl font-semibold mt-6 mb-2">Tipos de Inteligência Artificial</h2>
+
+<p class="text-gray-700 text-base">
+Outro ramo de destaque é a <strong>IA preditiva</strong>, usada em áreas como saúde, finanças e segurança pública. Esses sistemas analisam grandes volumes de dados e fornecem previsões que auxiliam na tomada de decisões. Hospitais, por exemplo, já utilizam IA para identificar riscos de doenças antes mesmo de sintomas se manifestarem, permitindo tratamentos mais rápidos e eficazes.
+</p>
+
+<p class="text-gray-700 text-base">
+Na área de reconhecimento, temos as <strong>IAs de visão computacional e de voz</strong>, responsáveis por interpretar imagens e sons. Tecnologias de reconhecimento facial são aplicadas em aeroportos e sistemas de segurança, enquanto assistentes virtuais, como Alexa e Google Assistant, utilizam processamento de linguagem natural para entender comandos e interagir com usuários em tempo real.
+</p>
+
+<p class="text-gray-700 text-base">
+Além disso, a IA desempenha um papel central no desenvolvimento de veículos autônomos. Carros que “aprendem” a ler o trânsito, identificar obstáculos e calcular rotas seguras representam um dos marcos mais complexos da aplicação dessa tecnologia. Ainda que os desafios de segurança e regulamentação sejam grandes, trata-se de um setor em rápido crescimento.
+</p>
+
+<h2 class="text-xl font-semibold mt-6 mb-2">Desafios Tecnológicos</h2>
+
+<p class="text-gray-700 text-base">
+Entretanto, nem tudo é positivo. Os desafios tecnológicos para a evolução da IA são significativos. Um deles é o enorme consumo de energia necessário para treinar grandes modelos, que demanda infraestrutura computacional avançada e causa impacto ambiental. Outro desafio está relacionado à escalabilidade: criar sistemas cada vez mais inteligentes, mas que sejam acessíveis, seguros e capazes de se adaptar a diferentes contextos.
+</p>
+
+<h2 class="text-xl font-semibold mt-6 mb-2">Desafios Humanos e Éticos</h2>
+
+<p class="text-gray-700 text-base">
+No campo humano, os desafios são igualmente complexos. O uso da IA levanta debates sobre privacidade, segurança e desigualdade. Dados pessoais, por exemplo, precisam ser protegidos contra usos indevidos. Há também a preocupação com a substituição de empregos, especialmente em tarefas repetitivas, o que exige políticas públicas e programas de requalificação profissional para preparar a sociedade para novas funções.
+</p>
+
+<p class="text-gray-700 text-base">
+O aspecto ético é outro ponto sensível. Algoritmos podem carregar vieses invisíveis que refletem preconceitos humanos, gerando decisões discriminatórias em áreas críticas como contratações, crédito e justiça. Isso evidencia a necessidade de maior transparência e responsabilidade no desenvolvimento dessas ferramentas.
+</p>
+
+<h2 class="text-xl font-semibold mt-6 mb-2">Convivência Cotidiana com a IA</h2>
+
+<p class="text-gray-700 text-base">
+Apesar dos riscos, a convivência entre humanos e inteligência artificial tende a se intensificar. No dia a dia, já convivemos com recomendações de filmes em plataformas de streaming, filtros de e-mail que identificam spam, chatbots em sites de atendimento e tradutores automáticos que aproximam culturas. O futuro aponta para uma integração ainda mais profunda, em que a IA será tão natural quanto o uso de eletricidade.
+</p>
+
+<p class="text-gray-700 text-base">
+Do ponto de vista científico, a inteligência artificial abre portas para descobertas em escalas inéditas. Pesquisadores utilizam algoritmos avançados para analisar dados genômicos, prever mudanças climáticas e até auxiliar em missões espaciais. A capacidade da IA em processar informações de forma exponencial acelera descobertas que antes levariam décadas para serem alcançadas.
+</p>
+
+<p class="text-gray-700 text-base">
+No entanto, cabe à sociedade definir os limites éticos e legais para que a inteligência artificial seja utilizada de forma responsável. O equilíbrio entre inovação e precaução será determinante para que os benefícios superem os riscos. Assim, a IA não deve ser vista apenas como uma ferramenta tecnológica, mas como um fenômeno social que exige debate público, regulamentação e cooperação global.
+</p>
+
+<h2 class="text-xl font-semibold mt-6 mb-2">Exemplos de Uso Diário e Ferramentas Disponíveis</h2>
+
+<ul class="list-disc pl-6 text-gray-700 text-base">
+  <li><strong>ChatGPT (OpenAI):</strong> criação de textos, respostas inteligentes e suporte em tarefas.</li>
+  <li><strong>DALL·E e MidJourney:</strong> geração de imagens artísticas a partir de descrições textuais.</li>
+  <li><strong>Runway:</strong> edição e geração de vídeos com base em IA.</li>
+  <li><strong>Murf.ai:</strong> geração de vozes realistas para áudios e narrações.</li>
+  <li><strong>Canva AI:</strong> design automatizado com sugestões criativas.</li>
+</ul>
+
+<h2 class="text-xl font-semibold mt-6 mb-2">Fontes e Referências</h2>
+
+<ul class="list-disc pl-6 text-gray-700 text-base">
+  <li><a href="https://openai.com" target="_blank">OpenAI</a></li>
+  <li><a href="https://ai.google" target="_blank">Google AI</a></li>
+  <li><a href="https://research.ibm.com/artificial-intelligence" target="_blank">IBM Research – Artificial Intelligence</a></li>
+  <li><a href="https://www.nvidia.com/en-us/ai/" target="_blank">NVIDIA AI</a></li>
+  <li><a href="https://www.unesco.org/en/artificial-intelligence" target="_blank">UNESCO – Artificial Intelligence</a></li>
+</ul>
+              
+          </div>
+                    <!-- Linha divisória vermelha -->
+          <div class="border-b-2 border-yellow-500 my-6"></div>
+          <!-- Botões de compartilhamento -->
+          <div class="mt-8">
+            <h4 class="text-lg font-bold mb-3 text-gray-800">
+              Compartilhe esta matéria:
+            </h4>
+            <div class="flex space-x-4 text-2xl">
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/sharer/sharer.php?u=https://www.olhoderapina.com.br/PAGINA AQUI.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+
+              <!-- Twitter (X) -->
+              <a
+                href="https://twitter.com/intent/tweet?url=https://www.olhoderapina.com.br/PAGINA AQUI.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-x-twitter"></i>
+              </a>
+
+              <!-- WhatsApp -->
+              <a
+                href="https://api.whatsapp.com/send?text=https://www.olhoderapina.com.br/PAGINA AQUI.htmll"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.olhoderapina.com.br/PAGINA AQUI.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="https://t.me/share/url?url=https://www.olhoderapina.com.br/PAGINA AQUI.htmll"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-telegram"></i>
+              </a>
+            </div> 
+          </div>
+
+          
+
+          <!-- Linha divisória vermelha -->
+          <div class="border-b-2 border-yellow-500 my-6"></div>
+
+          <!-- Grid de destaques -->
+          
+
+          <div class="grid md:grid-cols-1 gap-4"> 
+            <div id="destaques-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            <div class="border-b-2 border-yellow-500 my-6"></div>
+            <script src="data/destaques.js"></script>
+            <div id="main-container"></div>       
+          </div>
+
+          <!-- Linha divisória vermelha -->
+          <!--<div class="border-b-2 border-yellow-200 my-6"></div>-->
+
+                  <!-- Coluna lateral -->
+        </section>
+        </section>
+        <aside class="space-y-6">
+
+          <div id="mais-lidas-container"></div>
+
+          <!-- Newsletter com caixa branca, bordas arredondadas e borda vermelha -->
+          <div class="bg-white rounded-lg border-2 border-500 p-4">
+            <h3 class="font-bold mb-3 border-b pb-2 text-base">Newsletter</h3>
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              class="border p-2 rounded w-full mb-2"
+            />
+            <button
+              class="bg-yellow-400 text-black px-4 py-2 rounded w-full hover:bg-yellow-500 transition"
+            >
+              Inscrever-se
+            </button>
+          </div>
+          <!-- Carrossel de imagens com título "Veja também" e conteúdo dinâmico -->
+          <div>
+            <h4 class="font-bold text-yellow-500 mb-2">Veja também</h4>
+            <img
+              id="carousel-image"
+              src="carrossel/001.jpg"
+              alt="Imagem do Carrossel"
+              class="rounded mb-2 w-full object-cover"
+            />
+            <h3 id="carousel-title" class="font-bold text-base">Título 1</h3>
+            <p id="carousel-description" class="text-base text-gray-600">
+              Resumo breve da notícia 1.
+            </p>
+          </div>
+
+          <!-- Outra div de patrocinado que foi mantida -->
+          <div class="bg-white rounded-lg border-2 border-red-500 p-4">
+            <div>
+              <h4 class="font-bold text-yellow-500 mb-2">Patrocinado</h4>
+              <img
+                src="https://placehold.co/200x200"
+                class="rounded mb-2 w-full object-cover"
+              />
+              <h3 class="font-bold">Título do Destaque 1</h3>
+              <p class="text-base text-gray-600">Resumo breve da notícia 1.</p>
+            </div>
+          </div>
+          <!--  cartão-->
+          <div
+            class="shadow-md rounded-lg p-4 flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 ..."
+          >
+            <img
+              class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
+              src="/img/ste.png"
+              alt=""
+            />
+            <div class="space-y-2 text-center sm:text-left">
+              <div class="space-y-0.5">
+                <p class="text-lg font-semibold text-black">Rapina</p>
+                <p class="font-medium text-base text-gray-500">
+                  Coiso coisado que coisa a coisa
+                </p>
+              </div>
+              <button
+                class=" border-yellow-500 text-black-500 hover:border-transparent hover:bg-yellow-500 hover:text-white active:bg-yellow-500 rounded-full px-4 py-1 text-sm font-semibold border-2 transition"
+              >
+                Fala que eu te escuito
+              </button>
+                          
+              
+            </div>
+            
+            <!--fim cartão-->
+          </div>
+          <!-- Inicio codigo Contador -->
+           <br></br>
+                            <div align="center"><a title="contador de dias" href="https://www.calendario.cnt.br/ferramentas/contador-de-dias-calculadora-prazo-entre-datas"><img src="https://contador-gratis.com/contadores-de-visitas/080925123029518.gif"></a><div><a href="https://www.contador-gratis.com/" title="contador de visitas">Doidos que ja nos viram</a></div></div>
+              <!-- Fim do codigo Contador -->
+        </aside>
+      </main>
+    </div>
+
+
+ <!-- seu grid de matérias, vídeos e colunas vai aqui exatamente como está -->
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-black text-white mt-8">
+      <div
+        class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm"
+      >
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Institucional</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-400">Sobre Nós</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Anuncie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Categorias</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Tecnologia</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Educação</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Redes Sociais</h4>
+          <div class="flex space-x-4 text-lg">
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Newsletter</h4>
+          <form class="flex flex-col space-y-2">
+            <p class="text-xs text-gray-400">
+              Receba novidades direto no seu e-mail:
+            </p>
+            <input
+              type="email"
+              placeholder="Seu e-mail"
+              class="px-3 py-2 rounded text-black"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded"
+            >
+              Assinar
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="bg-gray-900 text-center py-3 text-xs">
+        © 2025 - Olho de Rapina. Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <!-- Scripts externos -->
+    <script src="js/menu.js" defer></script>
+    <script src="js/moon.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/imagemDoDia.js" defer></script>
+    <script src="./data/destaque.js"></script>
+    <script src="data/main.js"></script>
+    <script src="data/mais-lidas.js"></script>
+  </body>
+</html>
