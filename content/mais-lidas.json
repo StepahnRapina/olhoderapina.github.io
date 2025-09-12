@@ -1,6 +1,11 @@
 {
   "maisLidas": [
     {
+      "titulo": "Eclipse Solar dia 21 de Setembro de 2025",
+      "link": "./eclipsesolar.html",
+      "thumb": "./image/materias/eclisolt.png"
+    },
+    {
       "titulo": "Fases da Lua: Guia Completo",
       "link": "./faselua2025.html",
       "thumb": "https://science.nasa.gov/wp-content/uploads/2023/08/waning-gibbous.jpg"
