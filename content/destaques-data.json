@@ -18,7 +18,7 @@
     },
     {
       "tipo": "imagem",
-      "titulo": "Equinócio de Primavera",
+      "titulo": "Equinócio",
       "imagem": "./image/materias/primavera.png",
       "descricao": "O equinócio é um fenômeno astronômico que acontece duas vezes ao ano, em março e setembro",
       "link": "./equinocio.html",
