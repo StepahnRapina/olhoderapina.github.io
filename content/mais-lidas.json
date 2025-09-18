@@ -1,6 +1,11 @@
 {
   "maisLidas": [
     {
+      "titulo": "Esfera Armilar",
+      "link": "./esferaarmilar.html",
+      "thumb": "./image/materias/armilar.png"
+    },
+    {
       "titulo": "Inteligência Artificial: Avanços, Benefícios e Desafios",
       "link": "./ias.html",
       "thumb": "./image/materias/ias001.png"
