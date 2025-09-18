@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Stephan Rapina" />
+    <meta
+      name="description"
+      content="Olho de Rapina - Portal de ciência, filosofia e conhecimento. Notícias, artigos e conteúdos em linguagem simples e acessível."
+      authors="Stephan Rapina"
+    />
+    <title>Olho de Rapina</title>
+
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos próprios -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      } /* evita distorção no celular */
+    </style>
+
+ <!-- Open Graph -->
+  <meta property="og:title" content="Esfera Armilar" />
+  <meta property="og:description"Ao longo dos séculos, diversas universidades e escolas de aritmética – como a Universidade de Salamanca e a Escola de Paris – construíram suas próprias esferas, cada uma com variações de tamanho e complexidade."/>
+  <meta property="og:image" content="https://www.olhoderapina.com.br/image/materias/armilar.png" />
+  <meta property="og:url" content="https://www.olhoderapina.com.br/esferaarmilar.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Para Twitter (opcional, mas recomendado) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Olho de Rapina - Esfera Armilar"/>
+  <meta name="twitter:description" content="Ao longo dos séculos, diversas universidades e escolas de aritmética – como a Universidade de Salamanca e a Escola de Paris – construíram suas próprias esferas, cada uma com variações de tamanho e complexidade." />
+  <meta name="twitter:image" content="https://www.olhoderapina.com.br/image/materias/armilar.png" />
+
+   <!-- Fim OPEN GRAPH -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> 
+</head>
+  <body class="bg-gray-100 font-sans text-black">
+    <!-- ========== NAVBAR ========== -->
+    <nav class="bg-black py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <ul class="hidden md:flex space-x-6 text-white">
+          <li><a href="https://www.olhoderapina.com.br">Home</a></li>
+          <li><a href="#">Páginas</a></li>
+          <li><a href="#">Novidades</a></li>
+          <li><a href="#">Patrão</a></li>
+          <li><a href="#">Sobre</a></li>
+        </ul>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-white hover:text-yellow-400"
+            ><i class="fab fa-x-twitter"></i
+          ></a>
+        </div>
+
+        <!-- Botão hamburger (somente no celular) -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-white text-2xl focus:outline-none"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden flex-col space-y-3 mt-3 px-6 md:hidden"
+      >
+        <a href="./index.html">Home</a>
+        <a href="#">Páginas</a>
+        <a href="#">Novidades</a>
+        <a href="#">Sobre</a>
+      </div>
+    </nav>
+
+    <!-- ========== HEADER ========== -->
+    <header">
+      <div id="site-header"></div>
+      <script src="./data/header.js"></script>
+      
+    </header>
+    <!--NAV-->
+    <nav class="bg-gray-100 border-b text-sm font-medium shadow-sm">
+      <div class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 overflow-x-auto">
+        <a href="#" class="hover:text-yellow-500 ">Economia</a>
+        <a href="#" class="hover:text-yellow-500">Esporte</a>
+        <a href="#" class="hover:text-yellow-500">TV</a>
+        <a href="#" class="hover:text-yellow-500">Ciência</a>
+        <a href="#" class="hover:text-yellow-500">Tecnologia</a>
+        <a href="#" class="hover:text-yellow-500">Educação</a>
+        <a href="#" class="hover:text-yellow-500">Política</a>
+      </div>
+    </nav>
+    <!-- Esta div garante que o fundo seja branco em toda a largura da página para a seção principal -->
+    <div class="bg-white">
+      <main class="max-w-7xl mx-auto px-6 py-8 grid lg:grid-cols-3 gap-6">
+        <!-- Coluna principal -->
+        <section class="lg:col-span-2 space-y-6">
+          <!-- Notícia em destaque -->
+          <div class="space-y-3 text-gray-700 text-sm leading-relaxed">
+            
+            
+            <h1 id="leitura"class="text-2xl font-bold mb-2">A Esfera de Armilar: O Grande Instrumento Celeste da Idade Média e da Era de Ouro da Ciência</h1>
+              <img
+              src="./image/materias/armilar.png"
+              alt="Matéria Principal"
+              class="rounded-lg mb-3 w-full object-cover"
+              />
+            <h2 class="font-medium text-base">Origem e evolução histórica</h2>
+            <p class="text-gray-700 text-base">A primeira versão da esfera de armilar teve origem na cultura islâmica, com astrônomos como Al‑Biruni e Al‑Khwarizmi, que refinavam os conceitos de Ptolomeu. No século XII, a esfera ganhou sua forma clássica graças ao trabalho de João de Nápoles, que adaptou o design antigo com a inclusão de anéis de declinação e de eclíptica. A partir daí, a esfera espalhou‑se rapidamente por todo o mundo cristão, graças aos manuscritos e ao comércio de artefatos científicos.</p>
+
+            <p class="text-gray-700 text-base">Ao longo dos séculos, diversas universidades e escolas de aritmética – como a Universidade de Salamanca e a Escola de Paris – construíram suas próprias esferas, cada uma com variações de tamanho e complexidade. Em tempos de transição para a Idade Moderna, a esfera continuou a desempenhar um papel crucial, sendo empregada por estudiosos como Roger Bacon, que a utilizou para calcular a distância da Terra ao Sol.</p>
+
+            <h2 class="font-medium text-base">O design técnico da esfera de armilar</h2>
+            <p class="text-gray-700 text-base">A estrutura da esfera consiste em anéis de bronze ou madeira, que são fixados em pontos de interseção que refletem as coordenadas celestes. Os anéis mais importantes são:</p>
+              <img
+              src="./image/materias/armilar2.png"
+              alt="Matéria Principal"
+              class="rounded-lg mb-3 w-full object-cover"
+              />
+            <ul class="text-gray-700 text-base">
+              <li><strong>Equador</strong> – que representa a linha do equador celeste, dividindo o céu em hemisfério norte e sul.</li>
+              <li><strong>Eclíptica</strong> – que descreve o caminho aparente do Sol ao longo do ano, fundamental para calcular as posições planetárias.</li>
+              <li><strong>Círculos de Declinação</strong> – que indicam a inclinação dos astros em relação ao equador.</li>
+              <li><strong>Anéis de Longitude</strong> – que permitem a medição do ângulo longitudinal de qualquer ponto celeste.</li>
+            </ul>
+
+            <p class="text-gray-700 text-base">A maioria das esferas modernas possui um mecanismo de rotação livre que facilita a orientação e a leitura das coordenadas.</p>
+
+            <h2 class="font-medium text-base">Esfera de Armilar na Idade Média: Educação e Cultura</h2>
+            <p class="text-gray-700 text-base">Na Idade Média, a esfera de armilar era um símbolo de conhecimento e autoridade. Foi incorporada no currículo de escolas de artes e universidades, onde os estudantes aprendiam a usar o instrumento para ensinar sobre a geometria do espaço e a natureza do universo. Em escolas de monastério, a esfera também servia como ferramenta para calcular a hora de oração, pois sua estrutura exibia o ponto de passagem do Sol, fundamental para a liturgia.</p>
+
+            <p class="text-gray-700 text-base">Além do uso acadêmico, a esfera de armilar se tornou objeto de arte. Muitos artistas, como Leonardo da Vinci, incluíram representações da esfera em seus desenhos e pinturas, mostrando não apenas a curiosidade científica, mas também a busca pela estética na ciência.</p>
+
+            <h2 class="font-medium text-base">A esfera na Era da Revolução Científica</h2>
+            <p class="text-gray-700 text-base">Com a ascensão de cientistas como Copérnico, Kepler e Galileo, a esfera de armilar ainda manteve sua relevância. Copérnico, por exemplo, utilizou o instrumento para demonstrar o modelo heliocêntrico, exibindo como os planetas orbitaram ao redor do Sol ao invés de da Terra. Enquanto Kepler desenvolvia suas leis de Kepler, a esfera permitia a visualização das órbitas elípticas.</p>
+
+            <p class="text-gray-700 text-base">Mesmo com o advento dos telescópios, a esfera continuou a ser uma ferramenta de referência, ajudando os astrônomos a calibrar e a medir as posições dos objetos celestes antes que a precisão das novas tecnologias tornasse a esfera obsoleta.</p>
+
+            <h2 class="font-medium text-base">Esfera de Armilar no Mundo Moderno</h2>
+            <p class="text-gray-700 text-base">Hoje, a esfera de armilar não é mais usada para cálculos científicos, mas continua viva em museus, exposições de ciência e na formação de estudantes em astronomia. Algumas universidades, como a Universidade de Cambridge, mantêm esferas originais em sua coleção, permitindo que os alunos possam compreender a evolução do método científico.</p>
+
+            <p class="text-gray-700 text-base">Além disso, a esfera de armilar tem ganhado popularidade em formatos digitais. Softwares de simulação e aplicativos de realidade aumentada trazem a esfera para a tela do celular, permitindo que os usuários explorem o céu de maneira interativa. Isso tem sido particularmente útil em aulas de geografia, física e história da ciência, criando um vínculo entre o passado e o presente.</p>
+
+            <h2 class="font-medium text-base">Legado Cultural e Inspiração</h2>
+            <p class="text-gray-700 text-base">A esfera de armilar inspirou gerações de cientistas, artistas e filósofos. Seu design elegante e funcional simboliza a busca humana por compreender o universo, e seu impacto cultural se estende além da astronomia. No mundo do design industrial, o conceito de anéis interligados inspirou a criação de objetos com movimento suave e harmonia visual, como relógios e móveis de linha moderna.</p>
+
+            <p class="text-gray-700 text-base">Além disso, a esfera de armilar aparece em vários filmes, documentários e obras de ficção científica, servindo como metáfora para a complexidade do cosmos. Por isso, permanece uma peça icônica nas narrativas sobre a expansão do conhecimento humano.</p>
+
+            <h2 class="font-medium text-base">Conclusão</h2>
+            <p class="text-gray-700 text-base">Em resumo, a esfera de armilar representa um marco na história da ciência, unindo geometria, astronomia e arte em uma estrutura fascinante. Embora tenha sido superada pelos avanços da tecnologia, seu legado continua vivo nas aulas de ciência, nas exposições culturais e nas mentes curiosas de quem busca entender o cosmos. Se você tem interesse em astronomia ou na história do pensamento científico, a esfera de armilar oferece um portal visual e interativo para o passado, permitindo que os estudantes e o público em geral façam uma viagem de volta aos dias de grande descoberta e curiosidade que ainda ecoa em nossa cultura atual.</p>
+
+            
+              
+          </div>
+                    <!-- Linha divisória vermelha -->
+          <div class="border-b-2 border-yellow-500 my-6"></div>
+          <!-- Botões de compartilhamento -->
+          <div class="mt-8">
+            <h4 class="text-lg font-bold mb-3 text-gray-800">
+              Compartilhe esta matéria:
+            </h4>
+            <div class="flex space-x-4 text-2xl">
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/sharer/sharer.php?u=https://www.olhoderapina.com.br/esferaarmilar.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+
+              <!-- Twitter (X) -->
+              <a
+                href="https://twitter.com/intent/tweet?url=https://www.olhoderapina.com.br/esferaarmilar.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-x-twitter"></i>
+              </a>
+
+              <!-- WhatsApp -->
+              <a
+                href="https://api.whatsapp.com/send?text=https://www.olhoderapina.com.br/esferaarmilar.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.olhoderapina.com.br/esferaarmilar.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+
+              <!-- Telegram -->
+              <a
+                href="https://t.me/share/url?url=https://www.olhoderapina.com.br/esferaarmilar.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-yellow-500 transition"
+              >
+                <i class="fab fa-telegram"></i>
+              </a>
+            </div> 
+          </div>
+
+          
+
+          <!-- Linha divisória vermelha -->
+          <div class="border-b-2 border-yellow-500 my-6"></div>
+
+          <!-- Grid de destaques -->
+          
+
+          <div class="grid md:grid-cols-1 gap-4"> 
+            <div id="destaques-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            <div class="border-b-2 border-yellow-500 my-6"></div>
+            <script src="data/destaques.js"></script>
+            <div id="main-container"></div>       
+          </div>
+
+          <!-- Linha divisória vermelha -->
+          <!--<div class="border-b-2 border-yellow-200 my-6"></div>-->
+
+                  <!-- Coluna lateral -->
+        </section>
+        </section>
+        <aside class="space-y-6">
+
+          <div id="mais-lidas-container"></div>
+
+          <!-- Newsletter com caixa branca, bordas arredondadas e borda vermelha -->
+          <div class="bg-white rounded-lg border-2 border-500 p-4">
+            <h3 class="font-bold mb-3 border-b pb-2 text-base">Newsletter</h3>
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              class="border p-2 rounded w-full mb-2"
+            />
+            <button
+              class="bg-yellow-400 text-black px-4 py-2 rounded w-full hover:bg-yellow-500 transition"
+            >
+              Inscrever-se
+            </button>
+          </div>
+          <!-- Carrossel de imagens com título "Veja também" e conteúdo dinâmico -->
+          <div>
+            <h4 class="font-bold text-yellow-500 mb-2">Veja também</h4>
+            <img
+              id="carousel-image"
+              src="carrossel/001.jpg"
+              alt="Imagem do Carrossel"
+              class="rounded mb-2 w-full object-cover"
+            />
+            <h3 id="carousel-title" class="font-bold text-base">Título 1</h3>
+            <p id="carousel-description" class="text-base text-gray-600">
+              Resumo breve da notícia 1.
+            </p>
+          </div>
+
+          <!-- Outra div de patrocinado que foi mantida -->
+          <div class="bg-white rounded-lg border-2 border-red-500 p-4">
+            <div>
+              <h4 class="font-bold text-yellow-500 mb-2">Patrocinado</h4>
+              <img
+                src="https://placehold.co/200x200"
+                class="rounded mb-2 w-full object-cover"
+              />
+              <h3 class="font-bold">Título do Destaque 1</h3>
+              <p class="text-base text-gray-600">Resumo breve da notícia 1.</p>
+            </div>
+          </div>
+          <!--  cartão-->
+          <div
+            class="shadow-md rounded-lg p-4 flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 ..."
+          >
+            <img
+              class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
+              src="/img/ste.png"
+              alt=""
+            />
+            <div class="space-y-2 text-center sm:text-left">
+              <div class="space-y-0.5">
+                <p class="text-lg font-semibold text-black">Rapina</p>
+                <p class="font-medium text-base text-gray-500">
+                  Coiso coisado que coisa a coisa
+                </p>
+              </div>
+              <button
+                class=" border-yellow-500 text-black-500 hover:border-transparent hover:bg-yellow-500 hover:text-white active:bg-yellow-500 rounded-full px-4 py-1 text-sm font-semibold border-2 transition"
+              >
+                Fala que eu te escuito
+              </button>
+                          
+              
+            </div>
+            
+            <!--fim cartão-->
+          </div>
+          <!-- Inicio codigo Contador -->
+           <br></br>
+                            <div align="center"><a title="contador de dias" href="https://www.calendario.cnt.br/ferramentas/contador-de-dias-calculadora-prazo-entre-datas"><img src="https://contador-gratis.com/contadores-de-visitas/080925123029518.gif"></a><div><a href="https://www.contador-gratis.com/" title="contador de visitas">Doidos que ja nos viram</a></div></div>
+              <!-- Fim do codigo Contador -->
+        </aside>
+      </main>
+    </div>
+
+
+ <!-- seu grid de matérias, vídeos e colunas vai aqui exatamente como está -->
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-black text-white mt-8">
+      <div
+        class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-sm"
+      >
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Institucional</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-400">Sobre Nós</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Contato</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Anuncie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Categorias</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-400">Ciência</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Tecnologia</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Educação</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Redes Sociais</h4>
+          <div class="flex space-x-4 text-lg">
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-yellow-400"
+              ><i class="fab fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-yellow-500">Newsletter</h4>
+          <form class="flex flex-col space-y-2">
+            <p class="text-xs text-gray-400">
+              Receba novidades direto no seu e-mail:
+            </p>
+            <input
+              type="email"
+              placeholder="Seu e-mail"
+              class="px-3 py-2 rounded text-black"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded"
+            >
+              Assinar
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="bg-gray-900 text-center py-3 text-xs">
+        © 2025 - Olho de Rapina. Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <!-- Scripts externos -->
+    <script src="js/menu.js" defer></script>
+    <script src="js/moon.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <script src="js/imagemDoDia.js" defer></script>
+    <script src="./data/destaque.js"></script>
+    <script src="data/main.js"></script>
+    <script src="data/mais-lidas.js"></script>
+  </body>
+</html>

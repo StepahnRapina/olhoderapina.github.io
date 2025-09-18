@@ -1,10 +1,10 @@
 {
   "principais": [
     {
-      "titulo": "Eclipse solar de 21 de setembro de 2025 - Um espetáculo astronômico visível no Pacífico Sul",
-      "link": "./eclipsesolar.html",
-      "imagem": "./image/materias/eclsol.jpg",
-      "descricao": "No dia 21 de setembro de 2025 ocorrerá um eclipse solar parcial, visível principalmente no Pacífico Sul. Na Nova Zelândia, ele será visto localmente no nascer do Sol do dia 22, devido à diferença de fuso horário. Também poderá ser acompanhado em partes da Austrália, Fiji e em algumas áreas da Antártica.",
+      "titulo": "A Esfera de Armilar: O Grande Instrumento Celeste da Idade Média e da Era de Ouro da Ciência",
+      "link": "./esferaarmilar.html",
+      "imagem": "./image/materias/armilar.png",
+      "descricao": "A primeira versão da esfera de armilar teve origem na cultura islâmica, com astrônomos como Al‑Biruni e Al‑Khwarizmi, que refinavam os conceitos de Ptolomeu. No século XII, a esfera ganhou sua forma clássica graças ao trabalho de João de Nápoles, que adaptou o design antigo com a inclusão de anéis de declinação e de eclíptica. A partir daí, a esfera espalhou‑se rapidamente por todo o mundo cristão, graças aos manuscritos e ao comércio de artefatos científicos.",
       "linkTexto": "Leia mais..."
     },
     {
