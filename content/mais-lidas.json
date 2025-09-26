@@ -1,6 +1,11 @@
 {
   "maisLidas": [
     {
+      "titulo": "Como uma bússola funciona",
+      "link": "./bussola.html",
+      "thumb": "./image/materias/buss02.jpg"
+    },
+    {
       "titulo": "Esfera Armilar",
       "link": "./esferaarmilar.html",
       "thumb": "./image/materias/armilar.png"
@@ -24,11 +29,6 @@
       "titulo": "Eclipse Lunar de 7 de Setembro de 2025",
       "link": "./eclipse07-09-25.html",
       "thumb": "data:image/jpeg;base64,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"
-    },
-    {
-      "titulo": "Equinócio: equilíbrio entre dia e noite",
-      "link": "./equinocio.html",
-      "thumb": "./image/materias/equinocio.jpg"
-    }
+    }    
   ]
 }
