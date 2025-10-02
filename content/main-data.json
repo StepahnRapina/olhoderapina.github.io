@@ -1,6 +1,13 @@
 {
   "principais": [
     {
+      "titulo": "O Mapa Estelar Pawnee",
+      "link": "./pawnee.html",
+      "imagem": "./image/materias/pawnee-star-chart.jpg",
+      "descricao": "O Mapa Estelar Pawnee é uma representação do céu noturno baseada no conhecimento astronômico tradicional do povo indígena Pawnee, nativo das Grandes Planícies da América do Norte (principalmente no atual estado de Nebraska, nos EUA)",
+      "linkTexto": "Leia mais..."
+    },   
+    {
       "titulo": "O Funcionamento da Bússola: Uma Jornada pelo Magnetismo da Terra",
       "link": "./bussola.html",
       "imagem": "./image/materias/buss01.png",
@@ -26,13 +33,6 @@
       "link": "./ias.html",
       "imagem": "./image/materias/ias001.png",
       "descricao": "A inteligência artificial (IA) deixou de ser um conceito restrito à ficção científica para se tornar um dos pilares centrais da transformação digital que vivemos hoje.",
-      "linkTexto": "Descubra mais"
-    },
-    {
-      "titulo": "Primavera 2025: flores, ciência e cultura",
-      "link": "./equinocio.html",
-      "imagem": "./image/materias/primavera.png",
-      "descricao": "A chegada da primavera traz mudanças climáticas e um espetáculo de cores.",
       "linkTexto": "Descubra mais"
     }
     
